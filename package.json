@@ -17,8 +17,9 @@
   "engines": {
     "node": ">=6"
   },
-  "main": "public/index.php",
+  "main": "public/index.html",
   "scripts": {
+    "start": "front-end-scripts start"
   },
   "jest": {
     "testRegex": "(/tests/unit/.*|\\.(test|spec))\\.(js|jsx)$",
@@ -30,7 +31,12 @@
     ]
   },
   "devDependencies": {
-    "front-end-scripts": "pixelfusion/front-end-scripts"
+    "eslint": "^3.11.1",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-filenames": "^1.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.8.0",
+    "front-end-scripts": "^0.9.0"
   },
   "dependencies": {
     "normalize.css": "^5.0.0",
