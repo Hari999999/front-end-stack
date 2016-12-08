@@ -1,4 +1,3 @@
-<?php require_once('../helpers.php'); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -12,11 +11,7 @@
         <meta name="description" content="Description Here (150 chars)"/><!-- TODO -->
         <meta name="subject" content="your website's subject"/><!-- TODO -->
         <meta name="author" content=""/><!-- TODO -->
-        <!-- TODO: Remove if not needed
-        <meta name="googlebot" content="index,follow"/>
-        <meta name="google" content="nositelinkssearchbox"/>
-        <meta name="google-site-verification" content="verification_token"/>
-        -->
+
         <meta name="abstract" content=""/><!-- TODO (optional) -->
         <meta name="topic" content=""/><!-- TODO (optional) -->
         <meta name="summary" content=""/><!-- TODO (optional) -->
@@ -62,7 +57,7 @@
         <link rel="canonical" href=""/><!-- TODO -->
 
         <link rel="icon" href="/favicon.ico"/>
-        <link rel="stylesheet" href="<?= webpack('app.css') ?>"/>
+        <!-- <link rel="stylesheet" href="app.css"/> -->
         <!-- <link rel="manifest" href="manifest.json"> TODO: Remove if not needed -->
 
         <!-- Prefetching, preloading, prebrowsing -->
@@ -75,34 +70,9 @@
         <link rel="preload" href="image.png"/>
         -->
 
-        <script src="<?= webpack('polyfill.js') ?>" defer></script>
-        <script src="<?= webpack('bundle.js') ?>" defer></script>
+        <script src="/build/index.js" defer></script>
     </head>
     <body>
-        <header class="header" role="banner">
 
-            <nav class="nav" role="navigation">
-                <a class="nav-item current" href="/">Home</a>
-                <a class="nav-item" href="/about">About</a>
-                <a class="nav-item" href="/contact">Contact</a>
-            </nav>
-
-        </header>
-
-        <main role="main">
-
-            <article class="content"></article>
-
-            <aside class="sidebar" role="complementary"></aside>
-
-        </main>
-
-
-        <footer class="footer" role="contentinfo">
-            <p class="copyright">&copy; 2016 COMPANY</p>
-            <p class="attribution">
-                <a href="//pixelfusion.co.nz">Created by Pixel Fusion</a>
-            </p>
-        </footer>
     </body>
 </html>
