@@ -4,5 +4,5 @@
 .tmp
 /node_modules
 /vendor
-/public/assets/builds
+/public/build
 /tests/coverage
