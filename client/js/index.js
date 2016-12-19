@@ -1,6 +1,6 @@
 import { foo } from './test';
 import svg4everybody from 'svg4everybody';
-import 'sass/index.scss'; // Import CSS
+import 'sass/index'; // Import CSS
 
 console.log('Test', foo());
 
