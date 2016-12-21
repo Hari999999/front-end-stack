@@ -2,7 +2,7 @@
 *.map
 .env
 .tmp
+/build
 /node_modules
-/vendor
-/public/build
 /tests/coverage
+/vendor

@@ -19,6 +19,7 @@
   },
   "main": "public/index.html",
   "scripts": {
+    "build": "front-end-scripts build",
     "start": "front-end-scripts start",
     "lint": "yarn run lint-css && yarn run lint-js",
     "lint-css": "stylelint \"client/sass/**/*.{css,scss}\" --syntax scss",
