@@ -12,8 +12,9 @@ before_install:
 install: yarn
 
 script:
+  - yarn install
   - yarn run lint
-  - yarn run build
+  - yarn build
 
 notifications:
   email: false
