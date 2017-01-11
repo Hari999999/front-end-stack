@@ -17,7 +17,7 @@
   "engines": {
     "node": ">=6"
   },
-  "main": "public/index.html",
+  "main": "static/index.html",
   "scripts": {
     "build": "front-end-scripts build",
     "start": "front-end-scripts start",
