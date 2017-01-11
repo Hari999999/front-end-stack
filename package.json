@@ -20,7 +20,9 @@
   "main": "static/index.html",
   "scripts": {
     "build": "front-end-scripts build",
+    "build-linked": "front-end-scripts build --linked",
     "start": "front-end-scripts start",
+    "start-linked": "front-end-scripts start --linked",
     "lint": "yarn run lint-css && yarn run lint-js",
     "lint-css": "stylelint \"client/sass/**/*.{css,scss}\" --syntax scss",
     "lint-js": "eslint \"client/js/**/*.{js,jsx}\" --quiet --fix",
@@ -43,7 +45,7 @@
     "eslint-plugin-filenames": "^1.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.8.0",
-    "front-end-scripts": "^0.9.5",
+    "front-end-scripts": "^0.9.6",
     "husky": "^0.12.0",
     "jest": "^18.0.0",
     "stylelint": "^7.7.0"
