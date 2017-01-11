@@ -15,7 +15,7 @@
     "url": "https://github.com/pixelfusion/front-end-stack/issues"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=7"
   },
   "main": "static/index.html",
   "scripts": {
