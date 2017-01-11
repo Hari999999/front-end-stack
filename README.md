@@ -6,9 +6,9 @@
 Used by the Front End team at [Pixel Fusion](https://pixelfusion.co.nz), a Product Design studio based in Auckland, New Zealand.
 
 ## Requirements
-- Node.js > 6.3.0 (`brew install node`)
-- NPM > 3.10.0 (installed as part of Node.js)
-- Yarn > 0.16.0 (`npm install -g yarn`)
+- Node.js > 7.3.0 (`brew install node`)
+- NPM > 4.0.0 (installed as part of Node.js)
+- Yarn > 0.18.0 (`brew install yarn`)
 
 ## Installing
 
@@ -16,7 +16,7 @@ Run `yarn install` to install the project.
 
 ## Running
 
-Run `yarn run watch` to watch and compile the Javascript and SCSS files. The project uses:
+Run `yarn start` to watch and compile the Javascript and SCSS files. The project uses:
 
 - Babel, to provide ES6 support.
 - PostCSS, to allow us to use:
