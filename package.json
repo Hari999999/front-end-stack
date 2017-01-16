@@ -20,9 +20,7 @@
   "main": "static/index.html",
   "scripts": {
     "build": "front-end-scripts build",
-    "build-linked": "front-end-scripts build --linked",
     "start": "front-end-scripts start",
-    "start-linked": "front-end-scripts start --linked",
     "lint": "yarn run lint-css && yarn run lint-js",
     "lint-css": "stylelint \"client/sass/**/*.{css,scss}\" --syntax scss",
     "lint-js": "eslint \"client/js/**/*.{js,jsx}\" --quiet --fix",

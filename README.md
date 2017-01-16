@@ -67,3 +67,10 @@ Our base HTML is inspired by:
 
 - [HTML5Boilerplate](https://github.com/h5bp/html5-boilerplate)
 - [HEAD](https://github.com/joshbuchea/HEAD)
+
+
+
+## Debugging
+
+`front-end-scripts build --linked`
+`front-end-scripts start --linked`
