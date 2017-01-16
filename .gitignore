@@ -3,6 +3,6 @@
 .env
 .tmp
 /node_modules
-/vendor
-/public/assets/builds
+/public
 /tests/coverage
+/vendor

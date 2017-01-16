@@ -1,12 +1,16 @@
-<?php require_once('../helpers.php'); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <!-- Base (These 3 meta tags need to be *first*) -->
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
         <title>Style Guide</title>
 
-        <link rel="stylesheet" href="<?= webpack('app.css') ?>"/>
-        <script src="<?= webpack('polyfill.js') ?>" defer></script>
-        <script src="<?= webpack('bundle.js') ?>" defer></script>
+        <link rel="stylesheet" href="/build/app.css"/>
+
+        <script src="/build/index.js" defer></script>
     </head>
     <body>
         <main role="main" class="style-guide">
