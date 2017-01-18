@@ -1,14 +1,28 @@
 import { foo } from './test';
-import svg4everybody from 'svg4everybody';
 import 'sass/index'; // Import CSS
-
-console.log('Test', foo());
 
 
 /*
-    Polyfills
+    Ensure polyfills only load on older browsers
  */
-svg4everybody();
+// Covers all IE versions and Safari < 10
+const browserSupportsAllFeatures = window.Promise && window.fetch;
+
+if (browserSupportsAllFeatures) {
+    initialise();
+} else {
+    // See 'Code Splitting' documentation for Webpack (https://webpack.js.org/guides/code-splitting-require/#dependencies)
+    require.ensure([], function() {
+        require('./polyfills.js');
+        initialise();
+    });
+}
 
 
-console.warn('Fill in the index.js file');
+/*
+    Main function
+ */
+function initialise() {
+    console.debug('Test', foo());
+    console.warn('Fill in the index.js file'); // eslint-disable-line
+}
