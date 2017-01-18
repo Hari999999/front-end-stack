@@ -60,7 +60,11 @@ Supported and tested in the following browsers:
 
 
 ## Polyfills
+The following polyfills have been included by default, ensure you remove any unused ones to cut down on file size and unnecessary JavaScript execution. Polyfills are only loaded for older browsers (Internet Explorer and Safari < 10).
+
+- [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) - Adds modern ES6 language support to older browsers (including *Promises*).
 - [SVG4Everybody](https://github.com/jonathantneal/svg4everybody) - Adds the ability to implement `<use></use>` SVG element in older browsers (IE10), for use with external SVG loading.
+- [whatwg-fetch](https://github.com/github/fetch) - Adds `fetch()` support to older browsers.
 
 
 ## Gotchas
