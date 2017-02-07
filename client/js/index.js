@@ -5,7 +5,7 @@ import 'sass/index'; // Import CSS
 /*
     Ensure polyfills only load on older browsers
  */
-// Covers all IE versions and Safari < 10
+// Covers all IE versions and Safari < 11
 const browserSupportsAllFeatures = window.Promise && window.fetch;
 
 if (browserSupportsAllFeatures) {
