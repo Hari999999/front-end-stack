@@ -17,8 +17,6 @@ if (browserSupportsAllFeatures) {
         initialise();
     });
 }
-
-
 /*
     Main function
  */
