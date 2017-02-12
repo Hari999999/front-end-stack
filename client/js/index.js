@@ -1,6 +1,11 @@
-import { foo } from './test';
+import { configureStore } from './store';
+import { Provider } from 'react-redux';
+import React from 'react';
+import { render } from 'react-dom';
+import Routes from './router';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { browserHistory, Router } from 'react-router';
 import 'sass/index'; // Import CSS
-
 
 /*
     Ensure polyfills only load on older browsers
@@ -17,10 +22,18 @@ if (browserSupportsAllFeatures) {
         initialise();
     });
 }
+
 /*
     Main function
  */
 function initialise() {
-    console.debug('Test', foo());
-    console.warn('Fill in the index.js file'); // eslint-disable-line
+    const reduxStore = configureStore();
+    const history = syncHistoryWithStore(browserHistory, reduxStore);
+
+    render((
+        <Provider store={reduxStore}>
+            <Router history={history} routes={Routes}>
+            </Router>
+        </Provider>
+    ), document.getElementById('root'));
 }
