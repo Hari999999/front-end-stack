@@ -44,7 +44,7 @@
         <link rel="canonical" href=""/><!-- TODO -->
 
         <link rel="icon" href="/favicon.ico"/>
-        <!-- <link rel="manifest" href="manifest.json"> TODO: Remove if not needed -->
+        <link rel="manifest" href="/manifest.json"><!--  TODO: Remove if not needed -->
 
         <!-- Prefetching, preloading, prebrowsing -->
         <!-- TODO: Remove if not needed
@@ -60,5 +60,13 @@
         <div class="constrain-width small">
 
         </div>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
     </body>
 </html>
