@@ -1,11 +1,12 @@
 import { configureStore } from './store';
+import createBrowserHistory from 'history/createBrowserHistory';
 import { Provider } from 'react-redux';
 import React from 'react';
 import { render } from 'react-dom';
+import { Router } from 'react-router';
 import Routes from './router';
-import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory, Router } from 'react-router';
 import 'sass/index'; // Import CSS
+
 
 /*
     Ensure polyfills only load on older browsers
@@ -28,11 +29,12 @@ if (browserSupportsAllFeatures) {
  */
 function initialise() {
     const reduxStore = configureStore();
-    const history = syncHistoryWithStore(browserHistory, reduxStore);
+    const history = createBrowserHistory();
 
     render((
         <Provider store={reduxStore}>
-            <Router history={history} routes={Routes}>
+            <Router history={history}>
+                {Routes}
             </Router>
         </Provider>
     ), document.getElementById('root'));
