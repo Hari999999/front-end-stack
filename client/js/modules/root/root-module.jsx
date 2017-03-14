@@ -10,7 +10,7 @@ class Root extends Component {
     render() {
         return (
             <div>
-                <h1>Hello world...</h1>
+                <h1>Hello world......</h1>
                 <h1>{this.props.state.get('reply')}</h1>
                 <input ref={(input) => { this.textInput = input; }} />
                 <button onClick={this.reply.bind(this)}>reply</button>
