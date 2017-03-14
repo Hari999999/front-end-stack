@@ -36,11 +36,6 @@ a.button,
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 
 
-    // States
-    &:hover {
-    }
-
-
     // Types
     &[disabled] {
     }
@@ -65,5 +60,33 @@ a.button,
 
         &:hover {
         }
+    }
+
+    &.icon {
+        display: flex;
+        align-items: center;
+        // padding-top: ;
+        // padding-right: ;
+        // padding-bottom: ;
+        // padding-left: ;
+    }
+
+    &.icon-left {
+        // padding-top: ;
+        // padding-right: ;
+        // padding-bottom: ;
+        // padding-left: ;
+    }
+
+    &.icon-right {
+        // padding-top: ;
+        // padding-right: ;
+        // padding-bottom: ;
+        // padding-left: ;
+    }
+
+
+    // States
+    &:hover {
     }
 }

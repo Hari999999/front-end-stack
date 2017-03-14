@@ -29,8 +29,11 @@
                     <li class="primary">Primary</li>
                     <li class="secondary">Secondary</li>
                     <li class="tertiary">Tertiary</li>
-                    <li class="black">Black</li>
-                    <li class="white || light">White</li>
+                    <li class="dark">Dark</li>
+                    <li class="light">Light</li>
+                    <li class="success">Success</li>
+                    <li class="warning">Warning</li>
+                    <li class="error">Error</li>
                 </ul>
             </section>
 
@@ -59,25 +62,45 @@
                 <!-- Buttons: primary, secondary, disabled -->
                 <p>
                     <a class="button" href="#">Button</a>
-                    <button class="button" href="#">Button</button>
+                    <button type="button" class="button">Button</button>
 
                     <br />
                     <br />
 
                     <a class="button primary" href="#">Primary Button</a>
-                    <button class="button primary" href="#">Primary Button</button>
+                    <button type="button" class="button primary">Primary Button</button>
 
                     <br />
                     <br />
 
                     <a class="button secondary" href="#">Secondary Button</a>
-                    <button class="button secondary" href="#">Secondary Button</button>
+                    <button type="button" class="button secondary">Secondary Button</button>
 
                     <br />
                     <br />
 
                     <a class="button disabled" href="#">Disabled Button</a>
-                    <button class="button disabled">Disabled Button</button>
+                    <button type="button" class="button" disabled>Disabled Button</button>
+
+                    <br />
+                    <br />
+
+                    <button type="button" class="button icon icon-left">Button with left icon</button>
+                    <button type="button" class="button icon"></button>
+                    <button type="button" class="button icon icon-right">Button with right icon</button>
+
+                    <button type="button" class="button icon">
+                        Button with left icon inline
+                    </button>
+                    <button type="button" class="button icon"></button>
+                    <button type="button" class="button icon">
+                        Button with right icon inline
+                    </button>
+
+                    <br />
+                    <br />
+
+                    <button type="button" class="close-button">Close</button>
                 </p>
             </section>
 
@@ -109,6 +132,98 @@
                     <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
                     <cite>Author's Name, 2020</cite>
                 </blockquote>
+            </section>
+
+            <section class="constrain-width">
+                <h2>Large width</h2>
+            </section>
+
+            <section class="constrain-width-medium">
+                <h2>Medium width</h2>
+            </section>
+
+            <section class="constrain-width-small">
+                <h2>Small width</h2>
+            </section>
+
+            <section class="constrain-width">
+                <h2>Forms</h2>
+                <hr />
+
+                <!-- Form -->
+                <form class="form" action="" method="" role="group">
+                    <label class="label" for="text">Text input</label>
+                    <input class="input" type="text" name="text" id="text" placeholder="text"/>
+
+                    <label class="label" for="text-disabled">Text input disabled</label>
+                    <input class="input" type="text" name="text-disabled" id="text-disabled" placeholder="text-disabled" disabled/>
+
+                    <label class="label" for="text-required">Text input Required</label>
+                    <input class="input" type="text" name="text-required" id="text-required" placeholder="text-required" required/>
+
+                    <label class="label" for="email">Email input</label>
+                    <input class="input" type="email" name="email" id="email" placeholder="email"/>
+
+                    <label class="label" for="tel">Telephone input</label>
+                    <input class="input" type="tel" name="tel" id="tel" placeholder="tel"/>
+
+                    <label class="label" for="select">Select</label>
+                    <select name="select" id="select">
+                        <option selected>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                        <option>Option 5</option>
+                    </select>
+
+                    <label class="label" for="textarea">Text area</label>
+                    <textarea class="textarea" name="textarea" id="textarea"></textarea>
+
+                    <div class="checkbox-group">
+                        <h3>Checkbox</h3>
+                        <div class="checkbox">
+                            <input type="checkbox" class="checkbox-input" name="checkbox-option-1" value="checkbox-option-1" id="checkbox-option-1"/>
+                            <label class="label" for="checkbox-option-1">Option 1</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" class="checkbox-input" name="checkbox-option-2" value="checkbox-option-2" id="checkbox-option-2"/>
+                            <label class="label" for="checkbox-option-2">Option 2</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" class="checkbox-input" name="checkbox-option-3" value="checkbox-option-3" id="checkbox-option-3"/>
+                            <label class="label" for="checkbox-option-3">Option 3</label>
+                        </div>
+                    </div>
+
+                    <div class="radio-group">
+                        <h3>Radio</h3>
+                        <div class="radio">
+                            <input type="radio" class="radio-input" name="radio-option-1" value="radio-option-1" id="radio-option-1"/>
+                            <label class="label" for="radio-option-1">Option 1</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" class="radio-input" name="radio-option-2" value="radio-option-2" id="radio-option-2"/>
+                            <label class="label" for="radio-option-2">Option 2</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" class="radio-input" name="radio-option-3" value="radio-option-3" id="radio-option-3"/>
+                            <label class="label" for="radio-option-3">Option 3</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button">Submit</button>
+                </form>
+            </section>
+
+            <section class="constrain-width">
+                <h2>Tool Tip</h2>
+                <hr />
+
+                <!-- Tool Tip -->
+                <div class="tool-tip">
+                    <h3>Tool Tip<button type="button" class="hint-button">?</button></h3>
+                    <p class="message">Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                </div>
             </section>
 
         </main>

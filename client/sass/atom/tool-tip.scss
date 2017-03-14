@@ -1,0 +1,95 @@
+/*
+    Tool tip
+ */
+.tool-tip {
+    position: relative;
+
+    .button-hint {
+
+
+        // States
+        &:hover + .message {
+            z-index: 1;
+
+            opacity: 1;
+        }
+    }
+
+    .message {
+        position: absolute;
+        z-index: -1;
+
+        opacity: 0;
+
+        transition: opacity 0.2s;
+
+        // Types
+        &.top,
+        &.bottom {
+
+            &::before {
+                right: calc(50% - rem(4));
+
+                border-right: 4px solid transparent;
+                border-left: 4px solid transparent;
+            }
+        }
+
+        &.right,
+        &.left {
+
+            &::before {
+                top: calc(50% - rem(4));
+
+                border-top: 4px solid transparent;
+                border-bottom: 4px solid transparent;
+            }
+        }
+
+        &.top {
+
+            &::before {
+                top: rem(-4);
+
+                border-bottom: 4px solid $color-primary-shade-1;
+            }
+        }
+
+        &.right {
+
+            &::before {
+                right: rem(-4);
+
+                border-left: 4px solid $color-primary-shade-1;
+            }
+        }
+
+        &.bottom {
+
+            &::before {
+                bottom: rem(-4);
+
+                border-top: 4px solid $color-primary-shade-1;
+            }
+        }
+
+        &.left {
+
+            &::before {
+                left: rem(-4);
+
+                border-right: 4px solid $color-primary-shade-1;
+            }
+        }
+
+
+        // Elements
+        &::before {
+            position: absolute;
+
+            display: block;
+
+            content: '';
+        }
+    }
+}
