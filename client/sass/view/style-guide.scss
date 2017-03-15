@@ -29,7 +29,7 @@
 
 
             // Types
-            &.light {
+            &.outline {
                 border: 1px solid $color-black;
             }
 
@@ -47,11 +47,11 @@
                 background-color: $color-tertiary;
             }
 
-            &.black {
+            &.dark {
                 background-color: $color-black;
             }
 
-            &.white {
+            &.light {
                 background-color: $color-white;
             }
         }
