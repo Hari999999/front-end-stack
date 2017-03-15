@@ -57,9 +57,12 @@ $folder-icon: /icons;
 $color-black:             rgb(0, 0, 0);
 $color-white:             rgb(255, 255, 255);
 
-$color-primary:           $color-black;
-$color-secondary:         $color-black;
-$color-tertiary:          $color-black;
+$color-primary:           rgb(10, 10, 200);
+$color-secondary:         rgb(10, 200, 0);
+$color-tertiary:          rgb(200, 10, 10);
+
+$color-dark:              $color-black;
+$color-light:             $color-white;
 
 
 
