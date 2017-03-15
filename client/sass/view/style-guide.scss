@@ -4,6 +4,10 @@
 .style-guide {
 
     // Elements
+    .style-guide-section {
+        margin-bottom: rem(40);
+    }
+
     .colours {
         display: flex;
         flex-wrap: wrap;
@@ -12,7 +16,9 @@
 
         list-style: none;
 
-        li {
+
+        // Elements
+        > * {
             display: block;
             width: rem(60);
             height: rem(60);
@@ -51,14 +57,8 @@
         }
     }
 
-    .icons {
-        margin-right: rem(-10);
-        margin-left: rem(-10);
-
-
-        // Elements
-        svg {
-            margin: 10px;
-        }
+    .icons > * {
+        display: inline-block;
+        margin-right: rem(10);
     }
 }
