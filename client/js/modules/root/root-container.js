@@ -1,11 +1,12 @@
 import * as rootActions from 'actions/root/root-actions';
 import { connect } from 'react-redux';
 import Root from './root-module';
+import selectReply from 'selectors/reply-selector';
 import { withRouter } from 'react-router';
 
 function mapStateToProps(state) {
     return {
-        state: state.root
+        reply: selectReply(state)
     };
 }
 

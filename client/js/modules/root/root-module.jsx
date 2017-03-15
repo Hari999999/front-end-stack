@@ -1,3 +1,4 @@
+import Hello from 'components/hello-world-component';
 import React, { Component } from 'react';
 const PropTypes = React.PropTypes;
 
@@ -10,18 +11,19 @@ class Root extends Component {
     render() {
         return (
             <div>
-                <h1>Hello world......</h1>
-                <h1>{this.props.state.get('reply')}</h1>
-                <input ref={(input) => { this.textInput = input; }} />
-                <button onClick={this.reply.bind(this)}>reply</button>
+                <h3>Location Obj: {JSON.stringify(this.props.location)}</h3>
+                <p>History Obj:{JSON.stringify(this.props.history)}</p>
+                <Hello reply={this.props.reply} replyToGreeting={this.props.replyToGreeting} />
             </div>
         );
     }
 }
 
 Root.propTypes = {
-    state: PropTypes.object,
-    replyToGreeting: PropTypes.func
+    location: PropTypes.object,
+    history: PropTypes.object,
+    reply: PropTypes.string,
+    replyToGreeting: PropTypes.func.isRequired
 };
 
 export default Root;
