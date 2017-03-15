@@ -3,6 +3,7 @@
  */
 .style-guide {
 
+    // Elements
     .colours {
         display: flex;
         flex-wrap: wrap;
@@ -47,6 +48,17 @@
             &.white {
                 background-color: $color-white;
             }
+        }
+    }
+
+    .icons {
+        margin-right: rem(-10);
+        margin-left: rem(-10);
+
+
+        // Elements
+        svg {
+            margin: 10px;
         }
     }
 }

@@ -8,13 +8,10 @@
 
         <title>Style Guide</title>
 
-        <link rel="stylesheet" href="/build/app.css"/>
-
-        <script src="/build/index.js" defer></script>
+        <script src="/index.js" defer></script>
     </head>
     <body>
         <main role="main" class="style-guide">
-
             <header role="heading" class="constrain-width">
                 <h1>Style Guide</h1>
                 <p>A working site style guide built for design and code quality control.</p>
@@ -24,9 +21,9 @@
                 <h2>Colour</h2>
                 <hr>
 
-                <!-- Base Theme Colors -->
+                <!-- Base Theme Colours -->
                 <ul class="colours">
-                    <li class="primary">Primary</li>
+                    <li class="primary"></li>
                     <li class="secondary">Secondary</li>
                     <li class="tertiary">Tertiary</li>
                     <li class="black">Black</li>
@@ -53,25 +50,56 @@
             </section>
 
             <section class="constrain-width">
+                <h2>Icons</h2>
+                <hr />
+
+                <div class="icons">
+                    <h4>Icons</h4>
+                    <!--
+                    <svg width="40" height="40" viewbox="0 0 40 40">
+                        <use xlink:href="/public/assets/icons/icons.svg#icon-name"></use>
+                    </svg>
+                    -->
+                    <hr>
+                    <h4>Social</h4>
+                    <svg width="40" height="40" viewbox="0 0 40 40">
+                        <use xlink:href="/public/assets/icons/social-icons.svg#facebook"></use>
+                    </svg>
+                    <svg width="40" height="40" viewbox="0 0 40 40">
+                        <use xlink:href="/public/assets/icons/social-icons.svg#twitter"></use>
+                    </svg>
+                    <svg width="40" height="40" viewbox="0 0 40 40">
+                        <use xlink:href="/public/assets/icons/social-icons.svg#instagram"></use>
+                    </svg>
+                    <svg width="40" height="40" viewbox="0 0 40 40">
+                        <use xlink:href="/public/assets/icons/social-icons.svg#google-plus"></use>
+                    </svg>
+                    <svg width="40" height="40" viewbox="0 0 40 40">
+                        <use xlink:href="/public/assets/icons/social-icons.svg#youtube"></use>
+                    </svg>
+                </div>
+            </section>
+
+            <section class="constrain-width">
                 <h2>Buttons</h2>
                 <hr />
 
                 <!-- Buttons: primary, secondary, disabled -->
                 <p>
                     <a class="button" href="#">Button</a>
-                    <button class="button" href="#">Button</button>
+                    <button class="button">Button</button>
 
                     <br />
                     <br />
 
                     <a class="button primary" href="#">Primary Button</a>
-                    <button class="button primary" href="#">Primary Button</button>
+                    <button class="button primary">Primary Button</button>
 
                     <br />
                     <br />
 
                     <a class="button secondary" href="#">Secondary Button</a>
-                    <button class="button secondary" href="#">Secondary Button</button>
+                    <button type="#" class="button secondary">Secondary Button</button>
 
                     <br />
                     <br />
@@ -110,7 +138,6 @@
                     <cite>Author's Name, 2020</cite>
                 </blockquote>
             </section>
-
         </main>
     </body>
 </html>
