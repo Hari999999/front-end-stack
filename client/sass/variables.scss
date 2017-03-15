@@ -29,8 +29,10 @@
 
 /*
     Asset Locations
+    - No quotes, causes issues with Webpack -
  */
-$folder-image: /images; /* No quotes, causes issues with Webpack */
+$folder-image: /images;
+$folder-icon: /icons;
 
 
 
