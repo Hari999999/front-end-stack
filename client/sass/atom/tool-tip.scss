@@ -4,8 +4,17 @@
 .tool-tip {
     position: relative;
 
-    .button-hint {
+    .hint-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: ;
+        // height: ;
 
+        // color: ;
+
+        // background-color: ;
+        border-radius: 50%;
 
         // States
         &:hover + .message {
