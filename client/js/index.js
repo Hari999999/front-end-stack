@@ -5,6 +5,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router } from 'react-router';
 import Routes from './router';
+import 'rxjs';
 import 'sass/index'; // Import CSS
 
 

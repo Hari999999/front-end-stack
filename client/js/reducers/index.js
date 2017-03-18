@@ -3,5 +3,6 @@ import root from './root/root-reducers';
 
 
 export default combineReducers({
-    root
+    root: root.base,
+    ping: root.ping
 });

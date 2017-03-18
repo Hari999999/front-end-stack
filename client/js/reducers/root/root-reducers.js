@@ -1,4 +1,5 @@
 import { Map } from 'immutable';
+import ping from 'reducers/root/ping/ping-reducers';
 import {
         REPLY_TO_GREETING
     } from 'actions/root/root-actions';
@@ -7,7 +8,7 @@ const INITIAL_STATE = new Map({
     reply: ''
 });
 
-export default (state = INITIAL_STATE, action) => {
+const base = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case REPLY_TO_GREETING:
             return replyToGreeting(state, action);
@@ -19,3 +20,8 @@ export default (state = INITIAL_STATE, action) => {
 function replyToGreeting(state, action) {
     return state.set('reply', action.payload.reply);
 }
+
+export default {
+    base,
+    ping
+};

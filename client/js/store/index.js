@@ -1,13 +1,16 @@
+import { createEpicMiddleware } from 'redux-observable';
 import logger from 'middleware/logger-middleware';
+import { pingEpic } from 'epics/root-epics.js';
 import reducers from 'reducers';
-import thunk from 'redux-thunk';
 import { applyMiddleware, compose, createStore } from 'redux';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line no-underscore-dangle
 
+const epicMiddleware = createEpicMiddleware(pingEpic);
+
 const enhancer = composeEnhancers(
-  applyMiddleware(thunk, logger)
+  applyMiddleware(epicMiddleware, logger)
 );
 
 let store;
