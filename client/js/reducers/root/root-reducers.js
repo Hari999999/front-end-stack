@@ -4,7 +4,7 @@ import {
         REPLY_TO_GREETING
     } from 'actions/root/root-actions';
 
-const INITIAL_STATE = new Map({
+export const INITIAL_STATE = new Map({
     reply: ''
 });
 
@@ -17,7 +17,7 @@ const base = (state = INITIAL_STATE, action) => {
     }
 };
 
-function replyToGreeting(state, action) {
+export function replyToGreeting(state, action) {
     return state.set('reply', action.payload.reply);
 }
 
