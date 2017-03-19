@@ -5,5 +5,5 @@
 .DS_Store
 /node_modules
 /public
-/tests/coverage
+/client/js/tests/coverage
 /vendor
