@@ -38,7 +38,7 @@
       "jsx"
     ],
     "rootDir": "client/js/",
-    "modulePaths": ["<rootDir>/client/js/"]
+    "modulePaths": ["<rootDir>"]
   },
   "devDependencies": {
     "eslint": "^3.11.1",
