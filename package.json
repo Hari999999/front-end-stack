@@ -37,6 +37,7 @@
       "js",
       "jsx"
     ],
+    "rootDir": "client/js/",
     "modulePaths": ["<rootDir>/client/js/"]
   },
   "devDependencies": {
