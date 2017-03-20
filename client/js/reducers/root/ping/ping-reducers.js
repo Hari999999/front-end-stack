@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 import { PONG } from 'actions/root/ping/ping-actions';
 
-const INITIAL_STATE = new Map({
+export const INITIAL_STATE = new Map({
     pong: ''
 });
 
