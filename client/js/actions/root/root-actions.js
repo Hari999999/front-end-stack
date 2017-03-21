@@ -1,8 +1,8 @@
-export const REPLY_TO_GREETING = 'ROOT__REPLY_TO_GREETING';
+export const GET_GITHUB_USER = 'ROOT__GET_GITHUB_USER';
+export const GET_GITHUB_USER_FAILURE = 'ROOT__GET_GITHUB_USER_FAILURE';
+export const GET_GITHUB_USER_SUCCESS = 'ROOT__GET_GITHUB_USER_SUCCESS';
 
-export const replyToGreeting = (reply) => ({
-    type: REPLY_TO_GREETING,
-    payload: {
-        reply
-    }
+export const getGitHubUser = (userId) => ({
+    type: GET_GITHUB_USER,
+    payload: userId
 });

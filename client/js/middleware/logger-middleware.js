@@ -5,5 +5,10 @@ const ignoreActions = [
 
 export default createLogger({
     collapsed: true,
-    predicate: (getState, action) => ignoreActions.find((ignore) => action.type !== ignore)
+    predicate: (getState, action) => !ignoreActions.find((ignore) => action.type === ignore),
+    stateTransformer: (state) => {
+        const ping = state.ping.toJS();
+        const root = state.root.toJS();
+        return { ...state, ping, root };
+    }
 });
