@@ -55,7 +55,8 @@ $folder-image: /images; /* No quotes, causes issues with Webpack */
 $color-black:             rgb(0, 0, 0);
 $color-white:             rgb(255, 255, 255);
 $color-red:               rgb(255, 0, 0);
-
+$color-gray:              rgb(125, 125, 125);
+$color-silver:            rgb(180, 180, 180);
 $color-primary:           $color-black;
 $color-secondary:         $color-black;
 $color-tertiary:          $color-black;

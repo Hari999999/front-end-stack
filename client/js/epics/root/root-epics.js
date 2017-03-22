@@ -2,6 +2,7 @@ import { ajax } from 'rxjs/observable/dom/ajax';
 import { combineEpics } from 'redux-observable';
 import { Observable } from 'rxjs/Observable';
 import ping from 'epics/root/ping/ping-epics';
+import starwars from 'epics/root/starwars/starwars-epics';
 import {
     GET_GITHUB_USER,
     GET_GITHUB_USER_FAILURE,
@@ -25,4 +26,4 @@ const root = (action$) =>
             }))
        );
 
-export default combineEpics(ping, root);
+export default combineEpics(ping, root, starwars);
