@@ -6,3 +6,12 @@ export const getGitHubUser = (userId) => ({
     type: GET_GITHUB_USER,
     payload: userId
 });
+
+export const getGitHubUserSuccess = (response) => ({
+    type: GET_GITHUB_USER_SUCCESS,
+    payload: response
+});
+export const getGitHubUserFailure = (error) => ({
+    type: GET_GITHUB_USER_FAILURE,
+    payload: error
+});
