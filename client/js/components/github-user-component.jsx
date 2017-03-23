@@ -1,3 +1,4 @@
+import ErrorBlock from 'components/error-block-component';
 import React, { Component } from 'react';
 const PropTypes = React.PropTypes;
 
@@ -20,12 +21,7 @@ class Root extends Component {
                         <h4>ID: {user.id}</h4>
                     </div>
                 }
-                { error &&
-                    <div className="github-error" style={{ width: 200, textAlign: 'center' }}>
-                        <h1 style={{ fontSize: '7em' }}>😢</h1>
-                        <h2 className="error-message">{error.message}</h2>
-                    </div>
-                }
+                { error && <ErrorBlock message={error.message} /> }
             </div>
         );
     }

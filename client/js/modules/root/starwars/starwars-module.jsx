@@ -1,5 +1,7 @@
+import ErrorBlock from 'components/error-block-component';
 import ReactTable from 'react-table';
 import React, { Component } from 'react';
+
 const PropTypes = React.PropTypes;
 
 const columns = [
@@ -58,14 +60,18 @@ class StarWars extends Component {
     }
 
     render() {
+        const { people, error } = this.props;
         return (
             <div>
-                { this.props.people &&
+                <h1></h1>
+                { people &&
                     <ReactTable
                       data={this.props.people}
                       columns={columns}
+                      defaultPageSize="5"
                     />
                 }
+                { error && <ErrorBlock message={error.message} /> }
             </div>
         );
     }
@@ -73,6 +79,7 @@ class StarWars extends Component {
 
 StarWars.propTypes = {
     people: PropTypes.array,
+    error: PropTypes.object,
     fetchStarWarsPeople: PropTypes.func.isRequired
 };
 
