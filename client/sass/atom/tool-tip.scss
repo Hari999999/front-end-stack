@@ -16,6 +16,7 @@
         // background-color: ;
         border-radius: 50%;
 
+
         // States
         &:hover + .message {
             z-index: 1;
@@ -28,9 +29,12 @@
         position: absolute;
         z-index: -1;
 
+        // padding: ;
+
         opacity: 0;
 
         transition: opacity 0.2s;
+
 
         // Types
         &.top,
