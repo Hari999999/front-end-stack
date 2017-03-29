@@ -73,43 +73,58 @@
 
                 <!-- Buttons: primary, secondary, disabled -->
                 <p>
-                    <a class="button" href="#">Button</a>
+                    <a class="button" href="#">Link Button</a>
                     <button type="button" class="button">Button</button>
 
                     <br />
                     <br />
 
-                    <a class="button primary" href="#">Primary Button</a>
+                    <a class="button inverse" href="#">Inverse Link Button</a>
+                    <button type="button" class="button inverse">Inverse Button</button>
+
+                    <br />
+                    <br />
+
+                    <a class="button primary" href="#">Primary Link Button</a>
                     <button type="button" class="button primary">Primary Button</button>
 
                     <br />
                     <br />
 
-                    <a class="button secondary" href="#">Secondary Button</a>
+                    <a class="button secondary" href="#">Secondary Link Button</a>
                     <button type="button" class="button secondary">Secondary Button</button>
 
                     <br />
                     <br />
 
-                    <a class="button disabled" href="#">Disabled Button</a>
+                    <a class="button disabled" href="#">Disabled Link Button</a>
                     <button type="button" class="button" disabled>Disabled Button</button>
 
                     <br />
                     <br />
 
                     <button type="button" class="button">
-                        Button
-                        <!-- <svg width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
-                            <title>Example icon</title>
-                            <use xlink:href="/public/assets/icons/icons.svg#icon-name"></use>
-                        </svg> -->
+                        <svg class="icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                            <title>Arrow up</title>
+                            <use xlink:href="/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                        Button with icon
                     </button>
 
-                    <br />
-                    <br />
-
-                    <button type="button" class="close-button">Close</button>
+                    <button type="button" class="button">
+                        Button with icon
+                        <svg class="icon right" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                            <title>Arrow up</title>
+                            <use xlink:href="/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
                 </p>
+            </section>
+            <section class="style-guide-section || constrain-width">
+                <h2>Close Button</h2>
+                <hr />
+
+                <button type="button" class="close-button">Close</button>
             </section>
 
             <section class="style-guide-section || constrain-width">
