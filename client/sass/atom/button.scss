@@ -44,6 +44,8 @@ a.button,
 
         opacity: 0.5;
 
+
+        // States
         &:hover {
             opacity: 0.5;
         }
@@ -60,6 +62,8 @@ a.button,
 
         background-color: $color-light;
 
+
+        // States
         &:hover {
         }
     }
@@ -67,6 +71,8 @@ a.button,
     &.primary {
         background-color: $color-primary;
 
+
+        // States
         &:hover {
 
         }
@@ -75,6 +81,8 @@ a.button,
     &.secondary {
         background-color: $color-secondary;
 
+
+        // States
         &:hover {
 
         }
