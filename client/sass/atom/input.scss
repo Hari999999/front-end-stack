@@ -1,0 +1,62 @@
+/*
+    Input
+ */
+.input,
+.select,
+.textarea {
+    display: block;
+    width: 100%;
+    padding: rem(10);
+
+
+    color: $color-dark;
+
+    background-color: transparent;
+    border: 1px solid currentColor;
+    border-radius: 0; // Mobile Safari reset
+    box-shadow: none; // Reset for Firefox
+    outline: none;
+
+    appearance: none;
+
+    // Elements
+    &::placeholder {
+
+    }
+
+    // When the input is empty
+    &:placeholder-shown {
+
+    }
+
+
+    // Remove clear cross from IE browsers
+    // &::-ms-clear {
+    //     display: none;
+    // }
+
+
+    // States
+    &:focus {
+
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+
+        opacity: 0.2;
+    }
+}
+
+.textarea {
+    resize: none;
+}
+
+.select {
+    height: rem(40);
+    padding-right: rem(40);
+
+    // background-image: ;
+    // background-position: ;
+    // background-repeat: no-repeat;
+}

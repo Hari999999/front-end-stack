@@ -3,10 +3,33 @@
  */
 form {
 
+
+    // Elements
     fieldset {
         padding: 0;
         margin: 0;
 
         border: 0;
+    }
+
+    .field {
+
+    }
+
+    .label {
+        display: block;
+        margin-bottom: rem(5);
+
+        font-size: rem(14);
+    }
+
+    .input,
+    .select {
+        margin-bottom: rem(20);
+
+        // Types
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
