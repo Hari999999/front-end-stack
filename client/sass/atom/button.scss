@@ -38,20 +38,6 @@ a.button,
 
 
     // Types
-    &:disabled,
-    &.disabled {
-        cursor: not-allowed;
-
-        opacity: 0.5;
-
-
-        // States
-        &:hover {
-            opacity: 0.5;
-        }
-
-    }
-
     &.block {
         display: block;
         width: 100%;
@@ -88,6 +74,8 @@ a.button,
         }
     }
 
+
+    // Elements
     .icon {
         display: flex;
         align-items: center;
@@ -110,5 +98,19 @@ a.button,
     // States
     &:hover {
         opacity: 0.8;
+    }
+
+    &:disabled,
+    &.disabled {
+        cursor: not-allowed;
+
+        opacity: 0.5;
+
+
+        // States
+        &:hover {
+            opacity: 0.5;
+        }
+
     }
 }
