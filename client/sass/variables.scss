@@ -56,13 +56,20 @@ $folder-icon: /icons;
  */
 $color-black:             rgb(0, 0, 0);
 $color-white:             rgb(255, 255, 255);
+$color-dark-blue:         rgb(10, 10, 200);
+$color-green:             rgb(10, 200, 0);
+$color-milano-red:        rgb(200, 10, 10);
 
-$color-primary:           rgb(10, 10, 200);
-$color-secondary:         rgb(10, 200, 0);
-$color-tertiary:          rgb(200, 10, 10);
+$color-primary:           $color-dark-blue;
+$color-secondary:         $color-green;
+$color-tertiary:          $color-milano-red;
 
 $color-dark:              $color-black;
 $color-light:             $color-white;
+
+// $color-success:           $color-green;
+// $color-error:             $color-red;
+// $color-warning:           $color-yellow;
 
 
 
