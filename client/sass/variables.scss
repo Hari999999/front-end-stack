@@ -59,6 +59,14 @@ $color-white:             rgb(255, 255, 255);
 $color-dark-blue:         rgb(10, 10, 200);
 $color-green:             rgb(10, 200, 0);
 $color-milano-red:        rgb(200, 10, 10);
+$color-endeavour:         rgb(0, 82, 155);
+$color-sail:              rgb(189, 229, 248);
+$color-vida-loca:         rgb(79, 138, 16);
+$color-tusk:              rgb(223, 242, 191);
+$color-chelsea-gem:       rgb(159, 96, 0);
+$color-buttermilk:        rgb(254, 239, 179);
+$color-monza:             rgb(216, 0, 12);
+$color-your-pink:         rgb(255, 186, 186);
 
 $color-primary:           $color-dark-blue;
 $color-secondary:         $color-green;
@@ -67,9 +75,14 @@ $color-tertiary:          $color-milano-red;
 $color-dark:              $color-black;
 $color-light:             $color-white;
 
-// $color-success:           $color-green;
-// $color-error:             $color-red;
-// $color-warning:           $color-yellow;
+$color-success:           $color-vida-loca;
+$color-success-tint:      $color-tusk;
+$color-warning:           $color-chelsea-gem;
+$color-warning-tint:      $color-buttermilk;
+$color-error:             $color-monza;
+$color-error-tint:        $color-your-pink;
+$color-information:       $color-endeavour;
+$color-information-tint:  $color-sail;
 
 
 
