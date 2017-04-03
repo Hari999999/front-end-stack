@@ -1,5 +1,5 @@
 export function foo() {
-    return 'food';
+    return 'foo';
 }
 export function bar() {
     return 'bar';
