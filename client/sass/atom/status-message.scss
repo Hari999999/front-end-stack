@@ -1,0 +1,41 @@
+/*
+    Message
+ */
+.status-message {
+    display: flex;
+    align-items: center;
+    padding: rem(10);
+
+    // Types
+    &.information {
+        color: $color-information;
+
+        background-color: $color-information-tint;
+    }
+
+    &.success {
+        color: $color-success;
+
+        background-color: $color-success-tint;
+    }
+
+    &.warning {
+        color: $color-warning;
+
+        background-color: $color-warning-tint;
+    }
+
+    &.error {
+        color: $color-error;
+
+        background-color: $color-error-tint;
+    }
+
+
+    // Elements
+    .icon {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: rem(5);
+    }
+}
