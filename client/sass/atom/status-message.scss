@@ -6,30 +6,26 @@
     align-items: center;
     padding: rem(10);
 
+    background-color: $color-light-shade-1;
+
 
     // Types
-    &.information {
-        color: $color-information;
-
-        background-color: $color-information-tint;
-    }
-
     &.success {
         color: $color-success;
 
-        background-color: $color-success-tint;
+        background-color: $color-success-tint-1;
     }
 
     &.warning {
         color: $color-warning;
 
-        background-color: $color-warning-tint;
+        background-color: $color-warning-tint-1;
     }
 
     &.error {
         color: $color-error;
 
-        background-color: $color-error-tint;
+        background-color: $color-error-tint-1;
     }
 
 
