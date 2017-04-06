@@ -38,11 +38,9 @@ $folder-icon: /icons;
 
 /*
     Color Naming Conventions:
-    - primary
-    - secondary
-    - tertiary
-    - quaternary
-    - quinary
+    - primary, secondary, tertiary
+    - dark, light
+    - succes, warning, error
 
     // Lighter
     - tint-1
@@ -55,38 +53,32 @@ $folder-icon: /icons;
     Color names generated at http://chir.ag/projects/name-that-color/
  */
 $color-black:               rgb(0, 0, 0);
-$color-midnight:            rgb(40, 40, 40);
+$color-midnight:            rgb(60, 60, 60);
 $color-concrete:            rgb(230, 230, 230);
 $color-white:               rgb(255, 255, 255);
-$color-swallow:             rgb(0, 0, 120);
-$color-water:               rgb(10, 10, 200);
-$color-indigo:              rgb(60, 60, 240);
-$color-green:               rgb(10, 200, 0);
-$color-milano-red:          rgb(200, 10, 10);
-$color-vida-loca:           rgb(79, 138, 16);
-$color-tusk:                rgb(223, 242, 191);
-$color-chelsea-gem:         rgb(159, 96, 0);
-$color-buttermilk:          rgb(254, 239, 179);
-$color-monza:               rgb(216, 0, 12);
-$color-your-pink:           rgb(255, 186, 186);
+$color-limbo:               rgb(62, 104, 204);
+$color-grass:               rgb(112, 226, 92);
+$color-tiger:               rgb(245, 162, 56);
+$color-monza:               rgb(216, 69, 77);
 
-$color-primary-tint-1:      $color-indigo;
-$color-primary:             $color-water;
-$color-primary-shade-1:     $color-swallow;
-$color-secondary:           $color-green;
-$color-tertiary:            $color-milano-red;
+$color-primary-tint-1:      color($color-limbo tint(20%));
+$color-primary:             $color-limbo;
+$color-primary-shade-1:     color($color-limbo shade(10%));
 
 $color-dark:                $color-black;
 $color-dark-tint-1:         $color-midnight;
+
 $color-light-shade-1:       $color-concrete;
 $color-light:               $color-white;
 
-$color-success:             $color-vida-loca;
-$color-success-tint-1:      $color-tusk;
-$color-warning:             $color-chelsea-gem;
-$color-warning-tint-1:      $color-buttermilk;
+$color-success:             $color-grass;
+$color-success-shade-1:     color($color-grass shade(10%));
+
+$color-warning:             $color-tiger;
+$color-warning-shade-1:     color($color-tiger shade(10%));
+
 $color-error:               $color-monza;
-$color-error-tint-1:        $color-your-pink;
+$color-error-shade-1:       color($color-monza shade(10%));
 
 
 
@@ -112,10 +104,3 @@ $constrain-width-large:   1400;
 $constrain-width:         960;
 $constrain-width-medium:  740;
 $constrain-width-small:   600;
-
-
-
-/*
-    Padding
- */
-$padding-width: rem(20);

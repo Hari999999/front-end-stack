@@ -50,29 +50,39 @@
 }
 
 .style-guide-colours {
+    margin-right: rem(-5);
     margin-bottom: rem(20);
-    margin-left: rem(-10);
+    margin-left: rem(-5);
 
     color: $color-white;
     list-style: none;
 
-    @media (--from-small-screen-w) {
+    @media (--from-tiny-screen-w) {
         display: flex;
         flex-wrap: wrap;
     }
 
 
     // Elements
-    .item {
+    .item-inner {
         position: relative;
 
-        display: block;
-        flex-grow: 1;
-        padding-bottom: rem(20);
-        margin-bottom: rem(10);
+        padding-bottom: rem(40);
         overflow: hidden;
 
-        border-left: rem(10) solid $color-light;
+        border-radius: rem(3);
+
+        @media (--from-small-screen-w) {
+            padding-bottom: rem(60);
+        }
+    }
+
+    .item {
+        flex-basis: 100%;
+        flex-grow: 1;
+        padding-right: rem(5);
+        padding-left: rem(5);
+        margin-bottom: rem(10);
 
         @media (--from-small-screen-w) {
             flex-basis: 25%;
@@ -84,25 +94,13 @@
 
 
         // Types
-        &.outline {
+        &.outline .item-inner {
             color: $color-dark;
+
+            border: 1px solid $color-dark;
 
 
             // Elements
-            &::before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 1;
-
-                width: 100%;
-                height: 100%;
-
-                box-shadow: inset 0 0 0 rem(1) $color-dark;
-
-                content: '';
-            }
-
             .title::after {
                 color: $color-dark;
             }
@@ -113,6 +111,10 @@
         &.small {
             flex-grow: 0;
 
+            @media (--from-tiny-screen-w) {
+                flex-basis: 50%;
+            }
+
             @media (--from-medium-screen-w) {
                 flex-basis: 25%;
             }
@@ -120,7 +122,7 @@
 
 
         // Colours
-        &.primary {
+        &.primary .item-inner {
             background-color: $color-primary;
 
 
@@ -138,7 +140,7 @@
             }
         }
 
-        &.dark {
+        &.dark .item-inner {
             background-color: $color-dark;
 
 
@@ -152,7 +154,7 @@
             }
         }
 
-        &.light {
+        &.light .item-inner {
             background-color: $color-light;
 
             .title::after {
@@ -164,7 +166,7 @@
             }
         }
 
-        &.success {
+        &.success .item-inner {
             background-color: $color-success;
 
 
@@ -173,12 +175,12 @@
                 content: '$color-success';
             }
 
-            .tint-1 {
-                background-color: $color-success-tint-1;
+            .shade-1 {
+                background-color: $color-success-shade-1;
             }
         }
 
-        &.warning {
+        &.warning .item-inner {
             background-color: $color-warning;
 
 
@@ -187,12 +189,12 @@
                 content: '$color-warning';
             }
 
-            .tint-1 {
-                background-color: $color-warning-tint-1;
+            .shade-1 {
+                background-color: $color-warning-shade-1;
             }
         }
 
-        &.error {
+        &.error .item-inner {
             background-color: $color-error;
 
 
@@ -201,57 +203,55 @@
                 content: '$color-error';
             }
 
-            .tint-1 {
-                background-color: $color-error-tint-1;
+            .shade-1 {
+                background-color: $color-error-shade-1;
             }
         }
+    }
+
+    .title,
+    .child {
+        margin-bottom: 0;
+    }
+
+    .title::after,
+    .child {
+        font-size: 12px;
+    }
+
+    .title {
+        padding: rem(20);
+
+        &::after {
+            display: block;
+
+            text-transform: uppercase;
+
+            opacity: 0.8;
+        }
+    }
+
+    .child {
+        padding: rem(10) rem(20);
+    }
+
+    .variations {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
 
 
         // Elements
-        .title,
-        .child {
-            margin-bottom: 0;
-        }
-
-        .title::after,
-        .child {
-            font-size: 12px;
-        }
-
-        .title {
-            padding: rem(20);
-
-            &::after {
-                display: block;
-
-                text-transform: uppercase;
-
-                opacity: 0.8;
-            }
-        }
-
-        .child {
-            padding: rem(10) rem(20);
-        }
-
-        .variations {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-
-            display: flex;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-
-            list-style: none;
-
-
-            // Elements
-            li {
-                flex-basis: 50%;
-                height: rem(14);
-            }
+        li {
+            flex-basis: 50%;
+            height: rem(14);
         }
     }
 }
