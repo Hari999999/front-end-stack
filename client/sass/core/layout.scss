@@ -5,7 +5,7 @@
 
 // Constraint
 .constrain-width {
-    max-width: $constrain-width;
+    max-width: rem($constrain-width);
     padding-right: rem(20);
     padding-left: rem(20);
     margin-right: auto;
@@ -14,10 +14,14 @@
 
     // Types
     &.small {
-        max-width: $constrain-width-small;
+        max-width: rem($constrain-width-small);
     }
 
     &.medium {
-        max-width: $constrain-width-medium;
+        max-width: rem($constrain-width-medium);
+    }
+
+    &.large {
+        max-width: rem($constrain-width-large);
     }
 }
