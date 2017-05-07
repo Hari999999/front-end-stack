@@ -22,16 +22,6 @@ textarea {
 
     appearance: none;
 
-    // Elements
-    &::placeholder {
-
-    }
-
-    // When the input is empty
-    &:placeholder-shown {
-
-    }
-
 
     // States
     &:focus {
@@ -42,6 +32,17 @@ textarea {
         cursor: not-allowed;
 
         opacity: 0.2;
+    }
+
+
+    // Elements
+    &::placeholder {
+
+    }
+
+    // When the input is empty
+    &:placeholder-shown {
+
     }
 }
 
