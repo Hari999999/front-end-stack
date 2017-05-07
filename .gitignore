@@ -6,3 +6,4 @@
 /public
 /tests/coverage
 /vendor
+.DS_Store
