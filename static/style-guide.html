@@ -21,16 +21,57 @@
                 <h2>Colour</h2>
                 <hr>
 
-                <!-- Base Theme Colors -->
-                <div class="colours">
-                    <div class="primary">Primary</div>
-                    <div class="secondary">Secondary</div>
-                    <div class="tertiary">Tertiary</div>
-                    <div class="dark">Dark</div>
-                    <div class="light">Light</div>
-                    <div class="success">Success</div>
-                    <div class="warning">Warning</div>
-                    <div class="error">Error</div>
+                <!-- Colours -->
+                <div class="style-guide-colours" role="group">
+                    <div class="item primary">
+                        <div class="item-inner">
+                            <p class="title">Primary</p>
+                            <ul class="variations">
+                                <li class="shade-1"></li>
+                                <li class="tint-1"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item small dark">
+                        <div class="item-inner">
+                            <p class="title">Dark</p>
+                            <ul class="variations">
+                                <li class="tint-1"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item small outline light">
+                        <div class="item-inner">
+                            <p class="title">Light</p>
+                            <ul class="variations">
+                                <li class="shade-1"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item small success">
+                        <div class="item-inner">
+                            <p class="title">Success</p>
+                            <ul class="variations">
+                                <li class="shade-1"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item small warning">
+                        <div class="item-inner">
+                            <p class="title">Warning</p>
+                            <ul class="variations">
+                                <li class="shade-1"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item small error">
+                        <div class="item-inner">
+                            <p class="title">Error</p>
+                            <ul class="variations">
+                                <li class="shade-1"></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -57,7 +98,7 @@
                 <hr />
 
                 <!-- Icons -->
-                <div class="icons">
+                <div class="style-guide-icons">
                     <!--
                     <svg width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
                         <title>Example icon</title>
@@ -144,17 +185,14 @@
 
             <section class="style-guide-section || constrain-width">
                 <h2>Constrain Widths</h2>
-                <h4>Large</h4>
-                <hr>
+                <hr />
 
-                <div class="constrain-width medium">
-                    <h4>Medium</h4>
-                    <hr>
-                </div>
-
-                <div class="style-guide-section || constrain-width small">
-                    <h4>Small</h4>
-                    <hr>
+                <!-- Constrain Widths -->
+                <div class="style-guide-lines">
+                    <p class="constrain-width large">Large</p>
+                    <p class="constrain-width">Normal</p>
+                    <p class="constrain-width medium">Medium</p>
+                    <p class="constrain-width small">Small</p>
                 </div>
             </section>
 
@@ -225,6 +263,41 @@
 
                     <button type="submit" class="button">Submit</button>
                 </form>
+            </section>
+
+            <section class="style-guide-section || constrain-width">
+                <h2>Status messages</h2>
+                <hr />
+
+                <!-- Status message -->
+                <p class="status-message information">
+                    <svg class="icon" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                       <title>Information</title>
+                       <use xlink:href="/icons/sprite.svg#information"></use>
+                   </svg>
+                    This is an information message.
+                </p>
+                <p class="status-message success">
+                    <svg class="icon" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                       <title>Success</title>
+                       <use xlink:href="/icons/sprite.svg#success"></use>
+                   </svg>
+                   This is a success message.
+               </p>
+                <p class="status-message warning">
+                    <svg class="icon" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                       <title>Warning</title>
+                       <use xlink:href="/icons/sprite.svg#warning"></use>
+                   </svg>
+                   This is a warning message.
+               </p>
+                <p class="status-message error">
+                    <svg class="icon" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                       <title>Error</title>
+                       <use xlink:href="/icons/sprite.svg#error"></use>
+                   </svg>
+                   This is an error message.
+               </p>
             </section>
 
             <section class="style-guide-section || constrain-width">
