@@ -1,9 +1,28 @@
 /*
     Form
  */
-form {
+.form {
 
-    legend {
-        margin-bottom: rem(10);
+
+    // Elements
+    .field {
+        margin-bottom: rem(20);
+
+
+        // Types
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .label {
+        display: block;
+        margin-bottom: rem(5);
+
+        font-size: rem(14);
+    }
+
+    .option .label {
+        margin-bottom: 0;
     }
 }
