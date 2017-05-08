@@ -58,14 +58,6 @@
     margin-bottom: rem(20);
     margin-left: rem(-5);
 
-    color: $color-white;
-    list-style: none;
-
-    @media (--from-tiny-screen-w) {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
 
     // Elements
     .item-inner {
