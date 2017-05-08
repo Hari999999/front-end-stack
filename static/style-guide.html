@@ -179,49 +179,51 @@
                 </div>
             </section>
 
-            <section class="style-guide-section || constrain-width">
+            <section class="style-guide-section || button-section || constrain-width">
                 <h2>Buttons</h2>
                 <hr />
 
                 <!-- Buttons: primary, secondary, disabled -->
-                <p>
+                <p>Default<br>
+                    <a class="button large" href="#">Button</a>
                     <a class="button" href="#">Button</a>
+                    <a class="button small" href="#">Button</a>
+                    <a class="button is-disabled">Disabled Button</a>
+
+                    <br>
+
                     <button type="button" class="button">Button</button>
-
-                    <br />
-                    <br />
-
-                    <a class="button primary" href="#">Primary Button</a>
-                    <button type="button" class="button primary">Primary Button</button>
-
-                    <br />
-                    <br />
-
-                    <a class="button secondary" href="#">Secondary Button</a>
-                    <button type="button" class="button secondary">Secondary Button</button>
-
-                    <br />
-                    <br />
-
-                    <a class="button disabled" href="#">Disabled Button</a>
                     <button type="button" class="button" disabled>Disabled Button</button>
 
-                    <br />
-                    <br />
+                    <br>
 
                     <button type="button" class="button">
-                        Button
-                        <!-- <svg width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
-                            <title>Example icon</title>
-                            <use xlink:href="/public/assets/icons/icons.svg#icon-name"></use>
-                        </svg> -->
+                        <svg class="icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                            <title>Arrow</title>
+                            <use xlink:href="/icons/sprite.svg#arrow"></use>
+                        </svg>
+                        Button with icon
                     </button>
 
-                    <br />
-                    <br />
-
-                    <button type="button" class="close-button">Close</button>
+                    <button type="button" class="button">
+                        Button with icon
+                        <svg class="icon right" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                            <title>Arrow</title>
+                            <use xlink:href="/icons/sprite.svg#arrow"></use>
+                        </svg>
+                    </button>
                 </p>
+                <p>Primary<br>
+                    <a class="button primary large" href="#">Primary Button (L)</a>
+                    <a class="button primary" href="#">Primary Button</a>
+                    <a class="button primary small" href="#">Primary Button (S)</a>
+                </p>
+            </section>
+            <section class="style-guide-section || constrain-width">
+                <h2>Close Button</h2>
+                <hr />
+
+                <button type="button" class="close-button">Close</button>
             </section>
 
             <section class="style-guide-section || constrain-width">
