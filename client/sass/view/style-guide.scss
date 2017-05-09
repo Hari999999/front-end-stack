@@ -5,8 +5,23 @@
     - .style-guide-colours
     - .style-guide-icons
  */
-.style-guide-section {
+
+body {
+    background-color: $color-light-shade-1;
+}
+
+.style-guide {
+    margin-top: rem(40);
     margin-bottom: rem(40);
+}
+
+.style-guide-section {
+    padding: rem(20);
+    margin-bottom: rem(40);
+
+    background-color: $color-light;
+
+    box-shadow: 0 10px 30px $color-shadow-primary;
 }
 
 .button-section .button {
