@@ -1,16 +1,11 @@
-import * as pingActions from 'actions/root/ping/ping-actions';
-
-const {
-    PING,
-    PONG
-} = pingActions;
+import { ping, PING, pong, PONG } from 'ducks/ping';
 
 describe('ping actions', () => {
     it('should create a ping action', () => {
         const expectedAction = {
             type: PING
         };
-        expect(pingActions.ping()).toEqual(expectedAction);
+        expect(ping()).toEqual(expectedAction);
     });
 });
 
@@ -19,6 +14,6 @@ describe('pong actions', () => {
         const expectedAction = {
             type: PONG
         };
-        expect(pingActions.pong()).toEqual(expectedAction);
+        expect(pong()).toEqual(expectedAction);
     });
 });

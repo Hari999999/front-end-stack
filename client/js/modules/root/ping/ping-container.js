@@ -1,5 +1,5 @@
-import * as pingActions from 'actions/root/ping/ping-actions';
 import { connect } from 'react-redux';
+import { ping } from 'ducks/ping';
 import Ping from './ping-module';
 import selectPong from 'selectors/pong-selector';
 import { withRouter } from 'react-router';
@@ -13,7 +13,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         ping: () => {
-            dispatch(pingActions.ping());
+            dispatch(ping());
         }
     };
 }

@@ -1,6 +1,5 @@
-import * as pingActions from 'actions/root/ping/ping-actions';
 import deepFreeze from 'deepfreeze';
-import pingReducers, { INITIAL_STATE as initialState } from 'reducers/root/ping/ping-reducers';
+import pingReducers, { INITIAL_STATE as initialState, pong } from 'ducks/ping';
 
 const INITIAL_STATE = deepFreeze(initialState);
 
@@ -17,7 +16,7 @@ describe('Ping reducer default', () => {
 
 describe('Ping reducer pong', () => {
     it('should set the pong property in the ping app state to "PONG"', () => {
-        const action = pingActions.pong();
+        const action = pong();
         const newState = pingReducers(INITIAL_STATE, action);
         expect(newState.get('pong')).toBe('PONG');
     });

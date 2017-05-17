@@ -1,5 +1,5 @@
-import * as startwarsActions from 'actions/root/starwars/starwars-actions';
 import { connect } from 'react-redux';
+import { fetchPeople } from 'ducks/starwars';
 import selectStarWarsPeople from 'selectors/starwars-people-selector';
 import StarWars from './starwars-module';
 import { withRouter } from 'react-router';
@@ -13,7 +13,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         fetchStarWarsPeople: () => {
-            dispatch(startwarsActions.fetchPeople());
+            dispatch(fetchPeople());
         }
     };
 }

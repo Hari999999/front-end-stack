@@ -1,5 +1,5 @@
-import * as rootActions from 'actions/root/root-actions';
 import { connect } from 'react-redux';
+import { getGitHubUser } from 'ducks/root';
 import Root from './root-module';
 import selectGitHubError from 'selectors/github-error-selector';
 import selectGitHubUser from 'selectors/github-user-selector';
@@ -15,7 +15,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         getGitHubUser: (reply) => {
-            dispatch(rootActions.getGitHubUser(reply));
+            dispatch(getGitHubUser(reply));
         }
     };
 }
