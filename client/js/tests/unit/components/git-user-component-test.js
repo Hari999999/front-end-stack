@@ -1,4 +1,4 @@
-import GitHubUser from 'components/github-user-component';
+import GitHubUser from 'components/github/github-user-component';
 import { mount } from 'enzyme';
 import React from 'react';
 

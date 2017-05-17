@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
 const getGitHubError = (state) => {
-    const error = state.root.get('error');
+    const error = state.gitHub.get('error');
     return error ? error.toJS() : null;
 };
 

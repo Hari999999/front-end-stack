@@ -1,8 +1,8 @@
-import ErrorBlock from 'components/error-block-component';
+import ErrorBlock from 'components/shared/error-block-component';
 import React, { Component } from 'react';
 const PropTypes = React.PropTypes;
 
-class Root extends Component {
+class GitHubUser extends Component {
 
     getUser() {
         this.props.getGitHubUser(this.textInput.value);
@@ -27,10 +27,10 @@ class Root extends Component {
     }
 }
 
-Root.propTypes = {
+GitHubUser.propTypes = {
     getGitHubUser: PropTypes.func.isRequired,
     user: PropTypes.object,
     error: PropTypes.object
 };
 
-export default Root;
+export default GitHubUser;

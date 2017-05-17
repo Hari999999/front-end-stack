@@ -1,4 +1,4 @@
-import ErrorBlock from 'components/error-block-component';
+import ErrorBlock from 'components/shared/error-block-component';
 import React from 'react';
 import { shallow } from 'enzyme';
 

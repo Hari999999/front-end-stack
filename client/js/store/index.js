@@ -1,8 +1,7 @@
 import { createEpicMiddleware } from 'redux-observable';
-import epics from 'ducks/epics';
 import logger from 'middleware/logger-middleware';
-import reducers from 'ducks/reducer';
 import { applyMiddleware, compose, createStore } from 'redux';
+import { epics, reducers } from 'ducks/index';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line no-underscore-dangle

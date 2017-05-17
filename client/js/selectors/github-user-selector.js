@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
 const getGitHubUser = (state) => {
-    const user = state.root.get('user');
+    const user = state.gitHub.get('user');
     return user ? user.toJS() : null;
 };
 

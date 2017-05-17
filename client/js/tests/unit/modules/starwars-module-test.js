@@ -1,6 +1,6 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import StarWars from 'modules/root/starwars/starwars-module';
+import StarWars from 'components/starwars/starwars-component';
 
 function setup(testKey) { // eslint-disable-line
     const props = {

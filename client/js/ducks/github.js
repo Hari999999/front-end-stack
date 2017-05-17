@@ -45,7 +45,7 @@ export const getGitHubUserFailure = (error) => ({
 });
 
 // Epics
-export const rootEpic = (action$) =>
+export const gitHubEpic = (action$) =>
       action$.ofType(GET_GITHUB_USER)
       .mergeMap((action) =>
          ajax

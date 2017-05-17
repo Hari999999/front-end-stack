@@ -1,8 +1,8 @@
-import GitHubUser from 'components/github-user-component';
+import GitHubUser from './github-user-component';
 import React, { Component } from 'react';
 const PropTypes = React.PropTypes;
 
-class Root extends Component {
+class GitHub extends Component {
 
     render() {
         return (
@@ -16,7 +16,7 @@ class Root extends Component {
     }
 }
 
-Root.propTypes = {
+GitHub.propTypes = {
     location: PropTypes.object,
     history: PropTypes.object,
     user: PropTypes.object,
@@ -24,4 +24,4 @@ Root.propTypes = {
     getGitHubUser: PropTypes.func.isRequired
 };
 
-export default Root;
+export default GitHub;

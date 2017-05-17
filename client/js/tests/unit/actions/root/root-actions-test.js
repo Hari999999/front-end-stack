@@ -5,7 +5,7 @@ import {
     getGitHubUser,
     getGitHubUserFailure,
     getGitHubUserSuccess
-} from 'ducks/root';
+} from 'ducks/github';
 
 describe('getGitHubUser() actions', () => {
     it('should create an action with the given userId as the payload.', () => {

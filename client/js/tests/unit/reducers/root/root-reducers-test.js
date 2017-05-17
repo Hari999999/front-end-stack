@@ -1,24 +1,24 @@
 import deepFreeze from 'deepfreeze';
-import rootReducers,
+import gitHubReducer,
     {
     GET_GITHUB_USER_FAILURE,
     GET_GITHUB_USER_SUCCESS,
     INITIAL_STATE as initialState
-    } from 'ducks/root';
+    } from 'ducks/github';
 
 const INITIAL_STATE = deepFreeze(initialState);
 
-describe('Root reducer default', () => {
+describe('GitHub reducer default', () => {
     it('should return the existing state when given an action that isnt handled by this reducer', () => {
         const action = {
             type: null
         };
-        const newState = rootReducers(undefined, action);
+        const newState = gitHubReducer(undefined, action);
         expect(newState).toBe(INITIAL_STATE);
     });
 });
 
-describe('Root reducer getGitHubUserSuccess', () => {
+describe('GitHub reducer getGitHubUserSuccess', () => {
     it('should set the given user in the app state', () => {
         const user = {
             avatar_url: '', // eslint-disable-line camelcase
@@ -29,13 +29,13 @@ describe('Root reducer getGitHubUserSuccess', () => {
             type: GET_GITHUB_USER_SUCCESS,
             payload: user
         };
-        const newState = rootReducers(INITIAL_STATE, action);
+        const newState = gitHubReducer(INITIAL_STATE, action);
         expect(newState.get('user').toJS()).toEqual(user);
         expect(newState.get('error')).toBeNull();
     });
 });
 
-describe('Root reducer getGitHubUserFailure', () => {
+describe('GitHub reducer getGitHubUserFailure', () => {
     it('should set the error in the app state', () => {
         const error = {
             message: 'ajax error 404'
@@ -44,7 +44,7 @@ describe('Root reducer getGitHubUserFailure', () => {
             type: GET_GITHUB_USER_FAILURE,
             payload: error
         };
-        const newState = rootReducers(INITIAL_STATE, action);
+        const newState = gitHubReducer(INITIAL_STATE, action);
         expect(newState.get('user')).toBeNull();
         expect(newState.get('error').toJS()).toEqual(error);
     });

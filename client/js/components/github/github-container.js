@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { getGitHubUser } from 'ducks/root';
-import Root from './root-module';
+import { getGitHubUser } from 'ducks/github';
+import GitHub from './github-component';
 import selectGitHubError from 'selectors/github-error-selector';
 import selectGitHubUser from 'selectors/github-user-selector';
 import { withRouter } from 'react-router';
@@ -23,6 +23,6 @@ function mapDispatchToProps(dispatch) {
 const VisibleRoot = withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Root));
+)(GitHub));
 
 export default VisibleRoot;

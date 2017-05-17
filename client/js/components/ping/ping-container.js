@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { ping } from 'ducks/ping';
-import Ping from './ping-module';
+import Ping from './ping-component';
 import selectPong from 'selectors/pong-selector';
 import { withRouter } from 'react-router';
 

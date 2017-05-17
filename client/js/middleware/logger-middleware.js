@@ -8,7 +8,7 @@ export default createLogger({
     predicate: (getState, action) => !ignoreActions.find((ignore) => action.type === ignore),
     stateTransformer: (state) => {
         const ping = state.ping.toJS();
-        const root = state.root.toJS();
-        return { ...state, ping, root };
+        const gitHub = state.gitHub.toJS();
+        return { ...state, ping, gitHub };
     }
 });
