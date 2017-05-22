@@ -1,5 +1,5 @@
 import { createEpicMiddleware } from 'redux-observable';
-import logger from 'middleware/logger-middleware';
+import logger from 'middleware/logger';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { epics, reducers } from 'ducks/index';
 

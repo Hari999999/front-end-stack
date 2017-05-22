@@ -9,20 +9,26 @@ export const GET_GITHUB_USER_SUCCESS = 'front-end-stack/root/GET_GITHUB_USER_SUC
 
 // Reducer
 export const INITIAL_STATE = new Map({
-    user: null,
+    avatar: Map(),
+    username: Map(),
     error: null
 });
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case GET_GITHUB_USER_SUCCESS:
-            return state
-                .set('user', new Map(action.payload))
-                .set('error', null);
+            {
+                const { avatar, username, id } = action.payload;
+                return state
+                    .setIn(['username', id], username)
+                    .setIn(['avatar', id], avatar)
+                    .set('error', null);
+            }
         case GET_GITHUB_USER_FAILURE:
             return state
                 .set('error', new Map(action.payload))
-                .set('user', null);
+                .set('avatar', new Map())
+                .set('username', new Map());
         default:
             return state;
     }
@@ -51,7 +57,11 @@ export const gitHubEpic = (action$) =>
          ajax
             .getJSON(`https://api.github.com/users/${action.payload}`)
             .map((response) => {
-                return getGitHubUserSuccess(response);
+                console.log('error', response);
+                const avatar = response.avatar_url;
+                const username = response.login;
+                const id = response.id;
+                return getGitHubUserSuccess({ avatar, username, id });
             })
             .catch((error) => Observable.of(
                 getGitHubUserFailure(error)

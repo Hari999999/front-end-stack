@@ -1,4 +1,4 @@
-import ErrorBlock from 'components/shared/error-block-component';
+import ErrorBlock from 'components/shared/error-block.component';
 import ReactTable from 'react-table';
 import React, { Component } from 'react';
 

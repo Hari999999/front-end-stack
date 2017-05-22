@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchPeople } from 'ducks/starwars';
-import selectStarWarsPeople from 'selectors/starwars-people-selector';
-import StarWars from './starwars-component';
+import selectStarWarsPeople from 'selectors/starwars-people';
+import StarWars from './starwars.component';
 import { withRouter } from 'react-router';
 
 function mapStateToProps(state) {

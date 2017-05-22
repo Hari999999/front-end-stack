@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import React from 'react';
 import { render } from 'react-dom';
 import { Router } from 'react-router';
-import Routes from './router';
+import Routes from './routes';
 import 'rxjs';
 import 'sass/index'; // Import CSS
 

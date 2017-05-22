@@ -1,14 +1,13 @@
 import { connect } from 'react-redux';
 import { getGitHubUser } from 'ducks/github';
-import GitHub from './github-component';
-import selectGitHubError from 'selectors/github-error-selector';
-import selectGitHubUser from 'selectors/github-user-selector';
+import GitHub from './github.component';
+import githubSelector from 'selectors/github';
 import { withRouter } from 'react-router';
 
 function mapStateToProps(state) {
     return {
-        user: selectGitHubUser(state),
-        error: selectGitHubError(state)
+        users: githubSelector.user(state),
+        error: githubSelector.error(state)
     };
 }
 

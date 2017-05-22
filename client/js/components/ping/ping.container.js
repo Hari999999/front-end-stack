@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { ping } from 'ducks/ping';
-import Ping from './ping-component';
-import selectPong from 'selectors/pong-selector';
+import Ping from './ping.component';
+import selectPong from 'selectors/pong';
 import { withRouter } from 'react-router';
 
 function mapStateToProps(state) {

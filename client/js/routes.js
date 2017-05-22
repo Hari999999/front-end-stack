@@ -1,8 +1,8 @@
-import GitHub from 'components/github/github-container';
-import Ping from 'components/ping/ping-container';
+import GitHub from 'components/github/github.container';
+import Ping from 'components/ping/ping.container';
 import React from 'react';
 import { Route } from 'react-router';
-import StarWars from 'components/starwars/starwars-container';
+import StarWars from 'components/starwars/starwars.container';
 
 export default
 <div>

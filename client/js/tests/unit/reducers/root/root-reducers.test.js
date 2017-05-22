@@ -20,17 +20,17 @@ describe('GitHub reducer default', () => {
 
 describe('GitHub reducer getGitHubUserSuccess', () => {
     it('should set the given user in the app state', () => {
-        const user = {
-            avatar_url: '', // eslint-disable-line camelcase
-            login: 'pf',
-            id: 12345
-        };
+        const avatar = 'https://avatars3.githubusercontent.com/u/425?v=3';
+        const username = 'james';
+        const id = 425;
+
         const action = {
             type: GET_GITHUB_USER_SUCCESS,
-            payload: user
+            payload: { username, avatar, id }
         };
         const newState = gitHubReducer(INITIAL_STATE, action);
-        expect(newState.get('user').toJS()).toEqual(user);
+        expect(newState.get('avatar').toJS()).toEqual({ 425: avatar });
+        expect(newState.get('username').toJS()).toEqual({ 425: username });
         expect(newState.get('error')).toBeNull();
     });
 });
@@ -45,7 +45,6 @@ describe('GitHub reducer getGitHubUserFailure', () => {
             payload: error
         };
         const newState = gitHubReducer(INITIAL_STATE, action);
-        expect(newState.get('user')).toBeNull();
         expect(newState.get('error').toJS()).toEqual(error);
     });
 });
