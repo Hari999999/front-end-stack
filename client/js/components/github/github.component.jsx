@@ -1,7 +1,7 @@
 import GitHubSearch from './github-search.component';
 import GitHubUser from './github-user.component';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-const PropTypes = React.PropTypes;
 
 class GitHub extends Component {
     renderUsers() {

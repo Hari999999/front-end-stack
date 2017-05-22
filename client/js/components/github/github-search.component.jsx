@@ -1,6 +1,6 @@
 import ErrorBlock from 'components/shared/error-block.component';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-const PropTypes = React.PropTypes;
 
 class GitHubSearch extends Component {
     getUser() {

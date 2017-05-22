@@ -14,16 +14,20 @@
 
 // Atoms
 @import 'atom/button.scss';
-@import 'atom/error-message.scss';
+@import 'atom/close-button.scss';
+@import 'atom/input.scss';
 @import 'atom/line.scss';
+@import 'atom/option.scss';
 @import 'atom/section.scss';
+@import 'atom/status-message.scss';
+@import 'atom/tool-tip.scss';
 
 
 // Molecules
 @import 'molecule/form.scss';
-@import 'molecule/hero.scss';
 @import 'molecule/navigation.scss';
 @import 'molecule/error-block.scss';
+
 
 // Organisms
 @import 'organism/footer.scss';
