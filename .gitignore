@@ -7,3 +7,4 @@
 /public
 /client/js/tests/coverage
 /vendor
+.DS_Store
