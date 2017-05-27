@@ -25,6 +25,11 @@ export const pong = () => ({ type: PONG });
 
 // Epics
 export const pingEpic = (action$) =>
-      action$.ofType(PING)
+    action$
+        .ofType(PING)
         .delay(1000) // eslint-disable-line
         .mapTo(pong());
+
+export const epics = {
+    pingEpic
+};

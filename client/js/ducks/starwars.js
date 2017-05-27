@@ -4,8 +4,10 @@ import { List, Map } from 'immutable';
 
 // Actions
 export const FETCH_PEOPLE = 'front-end-stack/starwars/FETCH_PEOPLE';
-export const FETCH_PEOPLE_FAILURE = 'front-end-stack/starwars/FETCH_PEOPLE_FAILURE';
-export const FETCH_PEOPLE_SUCCESS = 'front-end-stack/starwars/FETCH_PEOPLE_SUCCESS';
+export const FETCH_PEOPLE_FAILURE =
+    'front-end-stack/starwars/FETCH_PEOPLE_FAILURE';
+export const FETCH_PEOPLE_SUCCESS =
+    'front-end-stack/starwars/FETCH_PEOPLE_SUCCESS';
 
 // Reducer
 export const INITIAL_STATE = new Map({
@@ -42,13 +44,16 @@ export const fetchPeopleSuccess = (people) => ({
 });
 
 // Epics
-export const starwarsEpic = (action$) =>
-      action$.ofType(FETCH_PEOPLE)
-      .mergeMap(() =>
-         ajax
+const starwarsEpic = (action$) =>
+    action$.ofType(FETCH_PEOPLE).mergeMap(() =>
+        ajax
             .getJSON('https://swapi.co/api/people/')
             .map((response) => {
                 return fetchPeopleSuccess(response.results);
             })
             .catch((error) => Observable.of(fetchPeopleFailure(error)))
-       );
+    );
+
+export const epics = {
+    starwarsEpic
+};

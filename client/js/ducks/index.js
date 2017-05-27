@@ -1,13 +1,13 @@
 import { combineEpics } from 'redux-observable';
 import { combineReducers } from 'redux';
-import gitHub, { gitHubEpic } from './github';
-import ping, { pingEpic } from './ping';
-import starwars, { starwarsEpic } from './starwars';
+import gitHub, { epics as gitHubEpics } from './github';
+import ping, { epics as pingEpics } from './ping';
+import starwars, { epics as starwarsEpics } from './starwars';
 
 export const epics = combineEpics(
-    pingEpic,
-    starwarsEpic,
-    gitHubEpic
+    ...Object.values(pingEpics),
+    ...Object.values(starwarsEpics),
+    ...Object.values(gitHubEpics)
 );
 
 export const reducers = combineReducers({
@@ -15,4 +15,3 @@ export const reducers = combineReducers({
     ping,
     starwars
 });
-
