@@ -1,9 +1,34 @@
 import deepFreeze from 'deepfreeze';
-import pingReducers, { INITIAL_STATE as initialState, pong } from 'ducks/ping';
+import pingReducers, {
+    INITIAL_STATE as initialState,
+    ping,
+    PING,
+    pong,
+    PONG
+} from 'ducks/ping';
 
 const INITIAL_STATE = deepFreeze(initialState);
 
+// Actions
+describe('ping actions', () => {
+    it('should create a ping action', () => {
+        const expectedAction = {
+            type: PING
+        };
+        expect(ping()).toEqual(expectedAction);
+    });
+});
 
+describe('pong actions', () => {
+    it('should create a pong action', () => {
+        const expectedAction = {
+            type: PONG
+        };
+        expect(pong()).toEqual(expectedAction);
+    });
+});
+
+// Reducers
 describe('Ping reducer default', () => {
     it('should return the existing state when given an action that isnt handled by this reducer', () => {
         const action = {
