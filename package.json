@@ -32,8 +32,8 @@
   "jest": {
     "testRegex": "((unit|integration)/.*|\\.(test|spec))\\.(js|jsx)$",
     "collectCoverageFrom": [
-        "**/*.{js,jsx}",
-        "!**/tests/**"
+      "**/*.{js,jsx}",
+      "!**/tests/**"
     ],
     "coverageDirectory": "tests/coverage",
     "collectCoverage": true,
@@ -70,12 +70,14 @@
     "jest-fetch-mock": "https://github.com/hally9k/jest-fetch-mock",
     "normalize.css": "^5.0.0",
     "prop-types": "^15.5.10",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.2",
-    "react-router": "4.0.0-beta.7",
-    "react-router-dom": "^4.0.0",
+    "react": "^15.5.4",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-hot-loader": "3.0.0-beta.7",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "next",
     "react-table": "^5.3.4",
     "redux": "^3.6.0",
     "redux-logger": "^2.8.1",

@@ -11,7 +11,7 @@ class GithubSearch extends Component {
         const { error } = this.props;
         return (
             <div>
-                <label>Github User: <input ref={(input) => { this.textInput = input; }} /></label>
+                <label>Github User Name: <input ref={(input) => { this.textInput = input; }} /></label>
                 <button onClick={this.getUser.bind(this)}>Get User</button>
                 { error && <ErrorBlock message={error.message} /> }
             </div>

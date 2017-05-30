@@ -1,7 +1,7 @@
 import { createEpicMiddleware } from 'redux-observable';
 import logger from 'middleware/logger';
 import { applyMiddleware, compose, createStore } from 'redux';
-import { epics, reducers } from 'ducks/index';
+import { epics, reducers } from 'ducks';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line no-underscore-dangle
@@ -20,3 +20,13 @@ export function configureStore() {
 }
 
 export { store };
+
+// Hot Module Replacement
+if (module.hot) {
+    module.hot.accept('ducks', () => {
+        const rootEpic = require('ducks').epics;
+        epicMiddleware.replaceEpic(rootEpic); // Swap out epic middleware
+        const rootReducer = require('ducks').reducers;
+        store.replaceReducer(rootReducer);
+    });
+}

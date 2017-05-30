@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { getGithubUser } from 'ducks/github';
 import Github from './github.component';
 import githubSelector from 'selectors/github';
-import { withRouter } from 'react-router';
 
 function mapStateToProps(state) {
     return {
@@ -19,9 +18,9 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const VisibleRoot = withRouter(connect(
+const VisibleRoot = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Github));
+)(Github);
 
 export default VisibleRoot;
