@@ -1,11 +1,15 @@
 import deepFreeze from 'deepfreeze';
+import { testEpic } from 'tests/helpers';
 import pingReducers, {
+    epics,
     INITIAL_STATE as initialState,
     ping,
     PING,
     pong,
     PONG
 } from 'ducks/ping';
+
+const { pingEpic } = epics;
 
 const INITIAL_STATE = deepFreeze(initialState);
 
@@ -44,5 +48,18 @@ describe('Ping reducer pong', () => {
         const action = pong();
         const newState = pingReducers(INITIAL_STATE, action);
         expect(newState.get('pong')).toBe('PONG');
+    });
+});
+
+// Epics
+describe('Epics: Ping', () => {
+    it('should return the next action in the stream', () => {
+        return expect(
+            testEpic(
+                pingEpic,
+                ping()
+            )
+        ).resolves
+        .toEqual([pong()]);
     });
 });

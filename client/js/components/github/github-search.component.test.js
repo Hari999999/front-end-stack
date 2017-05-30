@@ -1,17 +1,17 @@
-import GitHubSearch from 'components/github/github-search.component';
+import GithubSearch from 'components/github/github-search.component';
 import { mount } from 'enzyme';
 import React from 'react';
 
 function setup() {
     const props = {
-        getGitHubUser: jest.fn(),
+        getGithubUser: jest.fn(),
         user: null,
         error: {
             message: 'ajax error 404'
         }
     };
 
-    const enzymeWrapper = mount(<GitHubSearch {...props} />);
+    const enzymeWrapper = mount(<GithubSearch {...props} />);
 
     return {
         props,
@@ -20,14 +20,14 @@ function setup() {
 }
 
 describe('components', () => {
-    describe('GitHubSearch', () => {
+    describe('GithubSearch', () => {
         it('should render the error message when given an error', () => {
             const { enzymeWrapper, props } = setup('error');
-            expect(enzymeWrapper.find('label').text()).toBe('GitHub User: ');
+            expect(enzymeWrapper.find('label').text()).toBe('Github User: ');
             expect(enzymeWrapper.find('button').text()).toBe('Get User');
             expect(enzymeWrapper.find('div.error-block').exists()).toBe(true);
             enzymeWrapper.find('button').simulate('click');
-            expect(props.getGitHubUser).toHaveBeenCalled();
+            expect(props.getGithubUser).toHaveBeenCalled();
         });
     });
 });

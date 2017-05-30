@@ -1,6 +1,4 @@
-import { ajax } from 'rxjs/observable/dom/ajax';
 import { Map } from 'immutable';
-import { Observable } from 'rxjs/Observable';
 
 // Actions
 export const GET_GITHUB_USER = 'front-end-stack/root/GET_GITHUB_USER';
@@ -36,36 +34,34 @@ export default (state = INITIAL_STATE, action) => {
 };
 
 // Action Creators
-export const getGitHubUser = (userId) => ({
+export const getGithubUser = (userId) => ({
     type: GET_GITHUB_USER,
     payload: userId
 });
 
-export const getGitHubUserSuccess = (response) => ({
+export const getGithubUserSuccess = (response) => ({
     type: GET_GITHUB_USER_SUCCESS,
     payload: response
 });
 
-export const getGitHubUserFailure = (error) => ({
+export const getGithubUserFailure = (error) => ({
     type: GET_GITHUB_USER_FAILURE,
     payload: error
 });
 
 // Epics
-const pingEpic = (action$) =>
+const githubEpic = (action$) =>
     action$.ofType(GET_GITHUB_USER).mergeMap((action) =>
-        ajax
-            .getJSON(`https://api.github.com/users/${action.payload}`)
-            .map((response) => {
-                console.log('error', response);
-                const avatar = response.avatar_url;
-                const username = response.login;
-                const id = response.id;
-                return getGitHubUserSuccess({ avatar, username, id });
-            })
-            .catch((error) => Observable.of(getGitHubUserFailure(error)))
+        fetch(`https://api.github.com/users/${action.payload}`)
+            .then((response) => response.json())
+            .then((response) => getGithubUserSuccess({
+                avatar: response.avatar_url,
+                username: response.login,
+                id: response.id
+            }))
+            .catch((error) => getGithubUserFailure(error))
     );
 
 export const epics = {
-    pingEpic
+    githubEpic
 };

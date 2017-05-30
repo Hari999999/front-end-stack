@@ -30,7 +30,11 @@
     "test": "jest"
   },
   "jest": {
-    "testRegex": "(/tests/(unit|integration)/.*|\\.(test|spec))\\.(js|jsx)$",
+    "testRegex": "((unit|integration)/.*|\\.(test|spec))\\.(js|jsx)$",
+    "collectCoverageFrom": [
+        "**/*.{js,jsx}",
+        "!**/tests/**"
+    ],
     "coverageDirectory": "tests/coverage",
     "collectCoverage": true,
     "moduleFileExtensions": [
@@ -40,6 +44,9 @@
     "rootDir": "client/js/",
     "modulePaths": [
       "<rootDir>"
+    ],
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
     ]
   },
   "devDependencies": {
@@ -52,14 +59,15 @@
     "stylelint": "^7.7.0"
   },
   "dependencies": {
-    "babel-jest": "^20.0.3",
+    "babel-jest": "^19.0.0",
     "babel-loader": "^6.4.1",
     "babel-polyfill": "^6.20.0",
     "deepfreeze": "^2.0.0",
-    "enzyme": "^2.8.2",
+    "enzyme": "^2.7.1",
     "front-end-scripts": "https://github.com/pixelfusion/front-end-scripts.git#ci-build-fix",
     "immutable": "^3.8.1",
     "jest": "^20.0.4",
+    "jest-fetch-mock": "https://github.com/hally9k/jest-fetch-mock",
     "normalize.css": "^5.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.4.2",

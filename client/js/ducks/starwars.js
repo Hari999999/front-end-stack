@@ -1,5 +1,3 @@
-import { ajax } from 'rxjs/observable/dom/ajax';
-import { Observable } from 'rxjs/Observable';
 import { List, Map } from 'immutable';
 
 // Actions
@@ -46,12 +44,10 @@ export const fetchPeopleSuccess = (people) => ({
 // Epics
 const starwarsEpic = (action$) =>
     action$.ofType(FETCH_PEOPLE).mergeMap(() =>
-        ajax
-            .getJSON('https://swapi.co/api/people/')
-            .map((response) => {
-                return fetchPeopleSuccess(response.results);
-            })
-            .catch((error) => Observable.of(fetchPeopleFailure(error)))
+        fetch('https://swapi.co/api/people/')
+            .then((response) => response.json())
+            .then((response) => fetchPeopleSuccess(response.results))
+            .catch((error) => fetchPeopleFailure(error))
     );
 
 export const epics = {

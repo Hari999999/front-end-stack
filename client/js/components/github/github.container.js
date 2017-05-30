@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { getGitHubUser } from 'ducks/github';
-import GitHub from './github.component';
+import { getGithubUser } from 'ducks/github';
+import Github from './github.component';
 import githubSelector from 'selectors/github';
 import { withRouter } from 'react-router';
 
@@ -13,8 +13,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        getGitHubUser: (reply) => {
-            dispatch(getGitHubUser(reply));
+        getGithubUser: (reply) => {
+            dispatch(getGithubUser(reply));
         }
     };
 }
@@ -22,6 +22,6 @@ function mapDispatchToProps(dispatch) {
 const VisibleRoot = withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(GitHub));
+)(Github));
 
 export default VisibleRoot;

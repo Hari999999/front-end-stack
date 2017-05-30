@@ -1,4 +1,4 @@
-import GitHubUser from 'components/github/github-user.component';
+import GithubUser from 'components/github/github-user.component';
 import { mount } from 'enzyme';
 import React from 'react';
 
@@ -11,7 +11,7 @@ function setup() {
         }
     };
 
-    const enzymeWrapper = mount(<GitHubUser {...props} />);
+    const enzymeWrapper = mount(<GithubUser {...props} />);
 
     return {
         props,
@@ -20,7 +20,7 @@ function setup() {
 }
 
 describe('components', () => {
-    describe('GitHubSearch', () => {
+    describe('GithubSearch', () => {
         it('should render the user when given a valid user object', () => {
             const { enzymeWrapper } = setup('user');
             expect(enzymeWrapper.find('div.github-user img').prop('src')).toBe('https://myimage.com');
