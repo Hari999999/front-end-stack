@@ -26,16 +26,10 @@
 
     // Elements
     .constrain-width {
-        padding-right: 0;
-        padding-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
-        margin-left: 0;
-
         @media (--from-medium-screen-w) {
-            margin-bottom: 20px;
+            margin-bottom: rem(20);
 
-            border-bottom: 1px dashed $color-dark;
+            border-bottom: rem(10) solid $color-dark;
         }
 
 
