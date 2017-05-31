@@ -1,5 +1,5 @@
 import { fetchPeopleSuccess } from 'actions/root/starwars/starwars.actions';
-import { reducers as rootReducer } from 'reducers';
+import rootReducer from 'reducers';
 import selectStarwarsPeople from 'selectors/starwars-people';
 
 const starwarsPeople = [

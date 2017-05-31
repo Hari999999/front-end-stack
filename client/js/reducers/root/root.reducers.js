@@ -10,6 +10,7 @@ export const INITIAL_STATE = new Map({
 });
 
 export default (state = INITIAL_STATE, action) => {
+    if (!action) return state;
     switch (action.type) {
         case GET_GITHUB_USER_SUCCESS:
             return getGitHubUserSuccess(state, action);
