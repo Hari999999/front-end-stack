@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-class GitHubUser extends Component {
+class GithubUser extends Component {
     render() {
         const { user } = this.props;
 
@@ -15,8 +15,8 @@ class GitHubUser extends Component {
     }
 }
 
-GitHubUser.propTypes = {
+GithubUser.propTypes = {
     user: PropTypes.object.isRequired
 };
 
-export default GitHubUser;
+export default GithubUser;

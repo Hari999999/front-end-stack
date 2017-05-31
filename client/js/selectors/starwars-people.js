@@ -1,13 +1,11 @@
 import { createSelector } from 'reselect';
 
-const getStarWarsPeople = (state) => {
-    return state.starwars.get('people') ? state.starwars.get('people').toJS() : null;
-};
+const getStarWarsPeople = (state) => state.starwars.get('people');
 
 const starWarsPeopleSelector = createSelector(
     [getStarWarsPeople],
     (starWarsPeople) => {
-        return starWarsPeople;
+        return starWarsPeople ? starWarsPeople.toJS() : null;
     }
 );
 

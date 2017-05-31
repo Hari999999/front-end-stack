@@ -1,1 +1,1 @@
-export default (state) => state.gitHub.get('username');
+export default (state) => state.github.get('username');

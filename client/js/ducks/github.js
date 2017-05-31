@@ -1,11 +1,11 @@
-import { ajax } from 'rxjs/observable/dom/ajax';
 import { Map } from 'immutable';
-import { Observable } from 'rxjs/Observable';
 
 // Actions
 export const GET_GITHUB_USER = 'front-end-stack/root/GET_GITHUB_USER';
-export const GET_GITHUB_USER_FAILURE = 'front-end-stack/root/GET_GITHUB_USER_FAILURE';
-export const GET_GITHUB_USER_SUCCESS = 'front-end-stack/root/GET_GITHUB_USER_SUCCESS';
+export const GET_GITHUB_USER_FAILURE =
+    'front-end-stack/root/GET_GITHUB_USER_FAILURE';
+export const GET_GITHUB_USER_SUCCESS =
+    'front-end-stack/root/GET_GITHUB_USER_SUCCESS';
 
 // Reducer
 export const INITIAL_STATE = new Map({
@@ -15,15 +15,15 @@ export const INITIAL_STATE = new Map({
 });
 
 export default (state = INITIAL_STATE, action) => {
+    if (!action) return state;
     switch (action.type) {
-        case GET_GITHUB_USER_SUCCESS:
-            {
-                const { avatar, username, id } = action.payload;
-                return state
-                    .setIn(['username', id], username)
-                    .setIn(['avatar', id], avatar)
-                    .set('error', null);
-            }
+        case GET_GITHUB_USER_SUCCESS: {
+            const { avatar, username, id } = action.payload;
+            return state
+                .setIn(['username', id], username)
+                .setIn(['avatar', id], avatar)
+                .set('error', null);
+        }
         case GET_GITHUB_USER_FAILURE:
             return state
                 .set('error', new Map(action.payload))
@@ -35,35 +35,34 @@ export default (state = INITIAL_STATE, action) => {
 };
 
 // Action Creators
-export const getGitHubUser = (userId) => ({
+export const getGithubUser = (userId) => ({
     type: GET_GITHUB_USER,
     payload: userId
 });
 
-export const getGitHubUserSuccess = (response) => ({
+export const getGithubUserSuccess = (response) => ({
     type: GET_GITHUB_USER_SUCCESS,
     payload: response
 });
 
-export const getGitHubUserFailure = (error) => ({
+export const getGithubUserFailure = (error) => ({
     type: GET_GITHUB_USER_FAILURE,
     payload: error
 });
 
 // Epics
-export const gitHubEpic = (action$) =>
-      action$.ofType(GET_GITHUB_USER)
-      .mergeMap((action) =>
-         ajax
-            .getJSON(`https://api.github.com/users/${action.payload}`)
-            .map((response) => {
-                console.log('error', response);
-                const avatar = response.avatar_url;
-                const username = response.login;
-                const id = response.id;
-                return getGitHubUserSuccess({ avatar, username, id });
-            })
-            .catch((error) => Observable.of(
-                getGitHubUserFailure(error)
-            ))
-       );
+const githubEpic = (action$) =>
+    action$.ofType(GET_GITHUB_USER).mergeMap((action) =>
+        fetch(`https://api.github.com/users/${action.payload}`)
+            .then((response) => response.json())
+            .then((response) => getGithubUserSuccess({
+                avatar: response.avatar_url,
+                username: response.login,
+                id: response.id
+            }))
+            .catch((error) => getGithubUserFailure(error))
+    );
+
+export const epics = {
+    githubEpic
+};

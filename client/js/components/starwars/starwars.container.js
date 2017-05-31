@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { fetchPeople } from 'ducks/starwars';
 import selectStarWarsPeople from 'selectors/starwars-people';
 import StarWars from './starwars.component';
-import { withRouter } from 'react-router';
 
 function mapStateToProps(state) {
     return {
@@ -18,9 +17,9 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const VisibleStarWars = withRouter(connect(
+const VisibleStarWars = connect(
   mapStateToProps,
   mapDispatchToProps
-)(StarWars));
+)(StarWars);
 
 export default VisibleStarWars;

@@ -2,16 +2,16 @@ import ErrorBlock from 'components/shared/error-block.component';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-class GitHubSearch extends Component {
+class GithubSearch extends Component {
     getUser() {
-        this.props.getGitHubUser(this.textInput.value);
+        this.props.getGithubUser(this.textInput.value);
     }
 
     render() {
         const { error } = this.props;
         return (
             <div>
-                <label>GitHub User: <input ref={(input) => { this.textInput = input; }} /></label>
+                <label>Github User: <input ref={(input) => { this.textInput = input; }} /></label>
                 <button onClick={this.getUser.bind(this)}>Get User</button>
                 { error && <ErrorBlock message={error.message} /> }
             </div>
@@ -19,9 +19,9 @@ class GitHubSearch extends Component {
     }
 }
 
-GitHubSearch.propTypes = {
-    getGitHubUser: PropTypes.func.isRequired,
+GithubSearch.propTypes = {
+    getGithubUser: PropTypes.func.isRequired,
     error: PropTypes.object
 };
 
-export default GitHubSearch;
+export default GithubSearch;

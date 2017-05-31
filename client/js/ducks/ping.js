@@ -10,6 +10,7 @@ export const INITIAL_STATE = new Map({
 });
 
 export default (state = INITIAL_STATE, action) => {
+    if (!action) return state;
     switch (action.type) {
         case PONG:
             return state.set('pong', 'PONG');
@@ -25,6 +26,11 @@ export const pong = () => ({ type: PONG });
 
 // Epics
 export const pingEpic = (action$) =>
-      action$.ofType(PING)
+    action$
+        .ofType(PING)
         .delay(1000) // eslint-disable-line
         .mapTo(pong());
+
+export const epics = {
+    pingEpic
+};
