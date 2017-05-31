@@ -1,4 +1,4 @@
-import * as starwarsActions from 'actions/root/starwars/starwars-actions';
+import * as starwarsActions from 'actions/root/starwars/starwars.actions';
 import { ajax } from 'rxjs/observable/dom/ajax';
 import { Observable } from 'rxjs/Observable';
 

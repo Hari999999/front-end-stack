@@ -1,6 +1,6 @@
-import * as pingActions from 'actions/root/ping/ping-actions';
+import * as pingActions from 'actions/root/ping/ping.actions';
 import deepFreeze from 'deepfreeze';
-import pingReducers, { INITIAL_STATE as initialState } from 'reducers/root/ping/ping-reducers';
+import pingReducers, { INITIAL_STATE as initialState } from 'reducers/root/ping/ping.reducers';
 
 const INITIAL_STATE = deepFreeze(initialState);
 

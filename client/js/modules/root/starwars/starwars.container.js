@@ -1,7 +1,7 @@
-import * as startwarsActions from 'actions/root/starwars/starwars-actions';
+import * as startwarsActions from 'actions/root/starwars/starwars.actions';
 import { connect } from 'react-redux';
-import selectStarWarsPeople from 'selectors/starwars-people-selector';
-import StarWars from './starwars-module';
+import selectStarWarsPeople from 'selectors/starwars-people.selector';
+import StarWars from './starwars.module';
 import { withRouter } from 'react-router';
 
 function mapStateToProps(state) {

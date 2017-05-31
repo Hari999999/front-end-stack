@@ -1,4 +1,4 @@
-import * as pingActions from 'actions/root/ping/ping-actions';
+import * as pingActions from 'actions/root/ping/ping.actions';
 
 const {
     PING,

@@ -1,8 +1,8 @@
-import * as rootActions from 'actions/root/root-actions';
+import * as rootActions from 'actions/root/root.actions';
 import { connect } from 'react-redux';
-import Root from './root-module';
-import selectGitHubError from 'selectors/github-error-selector';
-import selectGitHubUser from 'selectors/github-user-selector';
+import Root from './root.module';
+import selectGitHubError from 'selectors/github-error.selector';
+import selectGitHubUser from 'selectors/github-user.selector';
 import { withRouter } from 'react-router';
 
 function mapStateToProps(state) {

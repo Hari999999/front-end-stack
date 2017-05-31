@@ -1,8 +1,8 @@
-import Ping from 'modules/root/ping/ping-container';
+import Ping from 'modules/root/ping/ping.container';
 import React from 'react';
-import Root from 'modules/root/root-container';
+import Root from 'modules/root/root.container';
 import { Route } from 'react-router';
-import StarWars from 'modules/root/starwars/starwars-container';
+import StarWars from 'modules/root/starwars/starwars.container';
 
 export default
 <div>

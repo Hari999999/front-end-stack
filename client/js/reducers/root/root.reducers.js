@@ -2,7 +2,7 @@ import { Map } from 'immutable';
 import {
     GET_GITHUB_USER_FAILURE,
     GET_GITHUB_USER_SUCCESS
-    } from 'actions/root/root-actions';
+} from 'actions/root/root.actions';
 
 export const INITIAL_STATE = new Map({
     user: null,

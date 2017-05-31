@@ -1,9 +1,9 @@
-import * as rootActions from 'actions/root/root-actions';
+import * as rootActions from 'actions/root/root.actions';
 import { ajax } from 'rxjs/observable/dom/ajax';
 import { combineEpics } from 'redux-observable';
 import { Observable } from 'rxjs/Observable';
-import ping from 'epics/root/ping/ping-epics';
-import starwars from 'epics/root/starwars/starwars-epics';
+import ping from 'epics/root/ping/ping.epics';
+import starwars from 'epics/root/starwars/starwars.epics';
 
 const root = (action$) =>
       action$.ofType(rootActions.GET_GITHUB_USER)

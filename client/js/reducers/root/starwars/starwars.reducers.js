@@ -1,4 +1,4 @@
-import * as starwarsActions from 'actions/root/starwars/starwars-actions';
+import * as starwarsActions from 'actions/root/starwars/starwars.actions';
 import { List, Map } from 'immutable';
 
 export const INITIAL_STATE = new Map({

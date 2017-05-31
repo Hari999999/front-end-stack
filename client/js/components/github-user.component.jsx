@@ -1,4 +1,4 @@
-import ErrorBlock from 'components/error-block-component';
+import ErrorBlock from 'components/error-block.component';
 import React, { Component } from 'react';
 const PropTypes = React.PropTypes;
 

@@ -2,8 +2,8 @@ import deepFreeze from 'deepfreeze';
 import {
     GET_GITHUB_USER_FAILURE,
     GET_GITHUB_USER_SUCCESS
-    } from 'actions/root/root-actions';
-import rootReducers, { INITIAL_STATE as initialState } from 'reducers/root/root-reducers';
+} from 'actions/root/root.actions';
+import rootReducers, { INITIAL_STATE as initialState } from 'reducers/root/root.reducers';
 
 const INITIAL_STATE = deepFreeze(initialState);
 

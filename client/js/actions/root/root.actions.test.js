@@ -1,4 +1,4 @@
-import * as rootActions from 'actions/root/root-actions';
+import * as rootActions from 'actions/root/root.actions';
 
 describe('getGitHubUser() actions', () => {
     it('should create an action with the given userId as the payload.', () => {

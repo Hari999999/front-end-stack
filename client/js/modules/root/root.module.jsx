@@ -1,4 +1,4 @@
-import GitHubUser from 'components/github-user-component';
+import GitHubUser from 'components/github-user.component';
 import React, { Component } from 'react';
 const PropTypes = React.PropTypes;
 

@@ -1,4 +1,4 @@
-import { PING, pong } from 'actions/root/ping/ping-actions';
+import { PING, pong } from 'actions/root/ping/ping.actions';
 
 export default (action$) =>
       action$.ofType(PING)
