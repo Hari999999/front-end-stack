@@ -64,7 +64,7 @@
     "babel-polyfill": "^6.20.0",
     "deepfreeze": "^2.0.0",
     "enzyme": "^2.7.1",
-    "front-end-scripts": "^2.0.1",
+    "front-end-scripts": "^2.0.2",
     "immutable": "^3.8.1",
     "jest": "^20.0.4",
     "jest-fetch-mock": "https://github.com/hally9k/jest-fetch-mock",

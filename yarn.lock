@@ -2498,9 +2498,9 @@ fresh@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.0.tgz#f474ca5e6a9246d6fd8e0953cfa9b9c805afa78e"
 
-front-end-scripts@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/front-end-scripts/-/front-end-scripts-2.0.1.tgz#76a6011e9f3da2ad85acfbf63ea2d71933030cad"
+front-end-scripts@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/front-end-scripts/-/front-end-scripts-2.0.2.tgz#35fd5fad8b4b346bb64340a064eef844b572d95d"
   dependencies:
     babel-core "^6.18.2"
     babel-loader "^6.2.8"
@@ -2532,8 +2532,8 @@ front-end-scripts@^2.0.1:
     style-loader "github:bendytree/style-loader"
     stylelint-order "^0.3.0"
     url-loader "^0.5.7"
-    webpack "^2.2.0-rc"
-    webpack-dev-server "^2.2.0-rc"
+    webpack "^2.6.1"
+    webpack-dev-server "^2.4.5"
 
 fs-extra@^0.24.0:
   version "0.24.0"
@@ -6683,7 +6683,7 @@ webpack-dev-middleware@^1.10.2:
     path-is-absolute "^1.0.0"
     range-parser "^1.0.3"
 
-webpack-dev-server@^2.2.0-rc:
+webpack-dev-server@^2.4.5:
   version "2.4.5"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.4.5.tgz#31384ce81136be1080b4b4cde0eb9b90e54ee6cf"
   dependencies:
@@ -6719,7 +6719,7 @@ webpack-sources@^0.2.3:
     source-list-map "^1.1.1"
     source-map "~0.5.3"
 
-webpack@^2.2.0-rc:
+webpack@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.6.1.tgz#2e0457f0abb1ac5df3ab106c69c672f236785f07"
   dependencies:
