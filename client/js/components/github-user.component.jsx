@@ -5,14 +5,14 @@ const PropTypes = React.PropTypes;
 class Root extends Component {
 
     getUser() {
-        this.props.getGitHubUser(this.textInput.value);
+        this.props.getgithubUser(this.textInput.value);
     }
 
     render() {
         const { error, user } = this.props;
         return (
             <div>
-                <label>GitHub User: <input ref={(input) => { this.textInput = input; }} /></label>
+                <label>github User: <input ref={(input) => { this.textInput = input; }} /></label>
                 <button onClick={this.getUser.bind(this)}>Get User</button>
                 { user &&
                     <div className="github-user">
@@ -28,7 +28,7 @@ class Root extends Component {
 }
 
 Root.propTypes = {
-    getGitHubUser: PropTypes.func.isRequired,
+    getgithubUser: PropTypes.func.isRequired,
     user: PropTypes.object,
     error: PropTypes.object
 };

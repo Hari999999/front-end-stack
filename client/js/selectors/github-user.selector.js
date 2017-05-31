@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect';
 
-const getGitHubUser = (state) => {
+const getgithubUser = (state) => {
     const user = state.root.get('user');
     return user ? user.toJS() : null;
 };
 
 const githubUserSelector = createSelector(
-    [getGitHubUser],
+    [getgithubUser],
     (githubUser) => {
         return githubUser;
     }

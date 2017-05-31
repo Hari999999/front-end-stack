@@ -1,15 +1,15 @@
-import { configureMockStore } from 'redux-mock-store';
+import configureMockStore from 'redux-mock-store';
 import { createEpicMiddleware } from 'redux-observable';
 import { githubEpic } from 'epics/root/root.epics';
 import testEpic from 'tests/helpers.js';
 import {
-    getGithubUser,
-    getGithubUserFailure,
-    getGithubUserSuccess
+    getgithubUser,
+    getgithubUserFailure,
+    getgithubUserSuccess
 } from 'actions/root/root.actions';
 
 // Epics
-describe('Github epics', () => {
+describe('github epics', () => {
     it('should return the next action in the stream', () => {
         const response = {
             id: '12313',
@@ -21,10 +21,10 @@ describe('Github epics', () => {
         return expect(
             testEpic(
                 githubEpic,
-                getGithubUser('hally9k')
+                getgithubUser('hally9k')
             )
         ).resolves
-        .toEqual([getGithubUserSuccess({
+        .toEqual([getgithubUserSuccess({
             avatar: response.avatar_url,
             username: response.login,
             id: response.id
@@ -37,10 +37,10 @@ describe('Github epics', () => {
         return expect(
             testEpic(
                 githubEpic,
-                getGithubUser('hally9k')
+                getgithubUser('hally9k')
             )
         ).resolves
-        .toEqual([getGithubUserFailure()]);
+        .toEqual([getgithubUserFailure()]);
     });
 });
 
@@ -50,7 +50,7 @@ describe('Github epics', () => {
 / the epic we want to test with the redix-observable middleware.
 /
 */
-describe('Github epic integration', () => {
+describe('github epic integration', () => {
     it('should dispatch the initial action and then the deferred action', () => {
         const response = {
             id: '12313',
@@ -61,13 +61,13 @@ describe('Github epic integration', () => {
 
         const epicMiddleware = createEpicMiddleware(githubEpic);
         const store = configureMockStore([epicMiddleware])();
-        store.dispatch(getGithubUser('hally9k'));
+        store.dispatch(getgithubUser('hally9k'));
 
         process.nextTick(() => {
             const actions = store.getActions();
             expect(actions).toEqual([
-                getGithubUser('hally9k'),
-                getGithubUserSuccess({
+                getgithubUser('hally9k'),
+                getgithubUserSuccess({
                     avatar: response.avatar_url,
                     username: response.login,
                     id: response.id
@@ -81,13 +81,13 @@ describe('Github epic integration', () => {
 
         const epicMiddleware = createEpicMiddleware(githubEpic);
         const store = configureMockStore([epicMiddleware])();
-        store.dispatch(getGithubUser('hally9k'));
+        store.dispatch(getgithubUser('hally9k'));
 
         process.nextTick(() => {
             const actions = store.getActions();
             expect(actions).toEqual([
-                getGithubUser('hally9k'),
-                getGithubUserFailure()
+                getgithubUser('hally9k'),
+                getgithubUserFailure()
             ]);
         });
     });

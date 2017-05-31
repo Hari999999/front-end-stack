@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect';
 
-const getGitHubError = (state) => {
+const getgithubError = (state) => {
     const error = state.root.get('error');
     return error ? error.toJS() : null;
 };
 
 const githubErrorSelector = createSelector(
-    [getGitHubError],
+    [getgithubError],
     (githubError) => {
         return githubError;
     }
