@@ -23,6 +23,10 @@ describe('components', () => {
             expect(enzymeWrapper.find('div.error-block h2').text()).toBe('ajax error 404');
         });
     });
+    it('mounts the component', () => {
+        const { enzymeWrapper } = setup();
+        expect(enzymeWrapper).toMatchSnapshot();
+    });
 });
 
 // 😊

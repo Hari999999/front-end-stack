@@ -1,6 +1,6 @@
 import GithubUser from 'components/github-user.component';
-import { mount } from 'enzyme';
 import React from 'react';
+import { mount, shallow } from 'enzyme';
 
 function setup(testKey) {
     const props = {
@@ -50,6 +50,19 @@ describe('components', () => {
             expect(enzymeWrapper.find('div.error-block').exists()).toBe(true);
             enzymeWrapper.find('button').simulate('click');
             expect(props.getGithubUser).toHaveBeenCalled();
+        });
+        it('mounts the component', () => {
+            const props = {
+                getGithubUser: jest.fn(),
+                user: {
+                    avatar: 'https://myimage.com', // eslint-disable-line camelcase
+                    username: 'hally9k',
+                    id: '123456'
+                },
+                error: null
+            };
+            const enzymeWrapper = shallow(<GithubUser {...props} />);
+            expect(enzymeWrapper).toMatchSnapshot();
         });
     });
 });
