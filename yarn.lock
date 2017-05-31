@@ -3407,6 +3407,12 @@ jest-fetch-mock@^1.1.1:
   dependencies:
     whatwg-fetch "1.0.0"
 
+"jest-fetch-mock@https://github.com/hally9k/jest-fetch-mock":
+  version "1.1.0"
+  resolved "https://github.com/hally9k/jest-fetch-mock#6f1b69fbb7ba6d2e4941de27f1b62facce05ea2a"
+  dependencies:
+    whatwg-fetch "1.0.0"
+
 jest-haste-map@^20.0.4:
   version "20.0.4"
   resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-20.0.4.tgz#653eb55c889ce3c021f7b94693f20a4159badf03"
