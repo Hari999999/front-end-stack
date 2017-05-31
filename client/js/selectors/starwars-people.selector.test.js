@@ -1,6 +1,6 @@
 import { fetchPeopleSuccess } from 'actions/root/starwars/starwars.actions';
 import rootReducer from 'reducers';
-import selectStarwarsPeople from 'selectors/starwars-people';
+import selectStarwarsPeople from 'selectors/starwars-people.selector';
 
 const starwarsPeople = [
     {

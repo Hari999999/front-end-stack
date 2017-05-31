@@ -1,13 +1,25 @@
+/* eslint-disable sort-imports */
+import 'react-hot-loader/patch';
+import { AppContainer } from 'react-hot-loader';
 import { configureStore } from './store';
+import { ConnectedRouter } from 'react-router-redux';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { Provider } from 'react-redux';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router } from 'react-router';
-import Routes from './router';
+import Routes from './routes';
 import 'rxjs';
 import 'sass/index'; // Import CSS
 
+
+const store =
+    module.hot &&
+    module.hot.data &&
+    module.hot.data.store ?
+    module.hot.data.store
+    : configureStore();
+
+const history = createBrowserHistory();
 
 /*
     Ensure polyfills only load on older browsers
@@ -24,19 +36,25 @@ if (browserSupportsAllFeatures) {
         initialise();
     });
 }
-
 /*
     Main function
  */
 function initialise() {
-    const reduxStore = configureStore();
-    const history = createBrowserHistory();
-
-    render((
-        <Provider store={reduxStore}>
-            <Router history={history}>
-                {Routes}
-            </Router>
-        </Provider>
+    return render((
+        <AppContainer>
+            <Provider store={store}>
+                <ConnectedRouter history={history}>
+                    {Routes}
+                </ConnectedRouter>
+            </Provider>
+        </AppContainer>
     ), document.getElementById('root'));
+}
+
+if (module.hot) {
+    module.hot.accept();
+
+    module.hot.dispose((data) => {
+        data.store = store;
+    });
 }
