@@ -55,6 +55,10 @@ describe('Github reducer default', () => {
         const newState = githubReducer(undefined, action);
         expect(newState).toBe(INITIAL_STATE);
     });
+    it('should return the existing state when given an action with a falsey value', () => {
+        const newState = githubReducer();
+        expect(newState).toBe(INITIAL_STATE);
+    });
 });
 
 describe('Github reducer getGithubUserSuccess', () => {

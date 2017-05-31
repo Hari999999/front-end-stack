@@ -1,3 +1,4 @@
+import batchMiddleware from 'middleware/batch';
 import { createEpicMiddleware } from 'redux-observable';
 import logger from 'middleware/logger';
 import { applyMiddleware, compose, createStore } from 'redux';
@@ -9,7 +10,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const epicMiddleware = createEpicMiddleware(epics);
 
 const enhancer = composeEnhancers(
-  applyMiddleware(epicMiddleware, logger)
+  applyMiddleware(batchMiddleware, epicMiddleware, logger)
 );
 
 let store;
