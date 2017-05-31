@@ -6,10 +6,8 @@ input[type='password'],
 input[type='email'],
 input[type='number'],
 input[type='tel'],
-select,
 textarea {
-    display: block;
-    width: 100%;
+    max-width: 100%;
     padding: rem(10);
 
     color: $color-dark;
@@ -28,7 +26,8 @@ textarea {
 
     }
 
-    &:disabled {
+    &:disabled,
+    &.is-disabled {
         cursor: not-allowed;
 
         opacity: 0.2;
@@ -39,23 +38,12 @@ textarea {
     &::placeholder {
 
     }
-
-    // When the input is empty
-    &:placeholder-shown {
-
-    }
 }
 
 textarea {
-    max-width: 100%;
-    max-height: rem(500);
+    max-height: rem(300);
 }
 
 select {
     height: rem(40);
-    padding-right: rem(40);
-
-    background-image: url($folder-icon/arrow-dropdown.svg);
-    background-position: right center;
-    background-repeat: no-repeat;
 }
