@@ -13,21 +13,21 @@ export default (state = INITIAL_STATE, action) => {
     if (!action) return state;
     switch (action.type) {
         case GET_GITHUB_USER_SUCCESS:
-            return getgithubUserSuccess(state, action);
+            return getGithubUserSuccess(state, action);
         case GET_GITHUB_USER_FAILURE:
-            return getgithubUserFailure(state, action);
+            return getGithubUserFailure(state, action);
         default:
             return state;
     }
 };
 
-function getgithubUserSuccess(state, action) {
+function getGithubUserSuccess(state, action) {
     return state
             .set('user', new Map(action.payload))
             .set('error', null);
 }
 
-function getgithubUserFailure(state, action) {
+function getGithubUserFailure(state, action) {
     return state
             .set('error', new Map(action.payload))
             .set('user', null);

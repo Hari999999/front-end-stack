@@ -1,11 +1,11 @@
 import configureMockStore from 'redux-mock-store';
 import { createEpicMiddleware } from 'redux-observable';
 import { githubEpic } from 'epics/root/root.epics';
-import testEpic from 'tests/helpers.js';
+import { testEpic } from 'tests/helpers.js';
 import {
-    getgithubUser,
-    getgithubUserFailure,
-    getgithubUserSuccess
+    getGithubUser,
+    getGithubUserFailure,
+    getGithubUserSuccess
 } from 'actions/root/root.actions';
 
 // Epics
@@ -21,10 +21,10 @@ describe('github epics', () => {
         return expect(
             testEpic(
                 githubEpic,
-                getgithubUser('hally9k')
+                getGithubUser('hally9k')
             )
         ).resolves
-        .toEqual([getgithubUserSuccess({
+        .toEqual([getGithubUserSuccess({
             avatar: response.avatar_url,
             username: response.login,
             id: response.id
@@ -37,10 +37,10 @@ describe('github epics', () => {
         return expect(
             testEpic(
                 githubEpic,
-                getgithubUser('hally9k')
+                getGithubUser('hally9k')
             )
         ).resolves
-        .toEqual([getgithubUserFailure()]);
+        .toEqual([getGithubUserFailure()]);
     });
 });
 
@@ -61,13 +61,13 @@ describe('github epic integration', () => {
 
         const epicMiddleware = createEpicMiddleware(githubEpic);
         const store = configureMockStore([epicMiddleware])();
-        store.dispatch(getgithubUser('hally9k'));
+        store.dispatch(getGithubUser('hally9k'));
 
         process.nextTick(() => {
             const actions = store.getActions();
             expect(actions).toEqual([
-                getgithubUser('hally9k'),
-                getgithubUserSuccess({
+                getGithubUser('hally9k'),
+                getGithubUserSuccess({
                     avatar: response.avatar_url,
                     username: response.login,
                     id: response.id
@@ -81,13 +81,13 @@ describe('github epic integration', () => {
 
         const epicMiddleware = createEpicMiddleware(githubEpic);
         const store = configureMockStore([epicMiddleware])();
-        store.dispatch(getgithubUser('hally9k'));
+        store.dispatch(getGithubUser('hally9k'));
 
         process.nextTick(() => {
             const actions = store.getActions();
             expect(actions).toEqual([
-                getgithubUser('hally9k'),
-                getgithubUserFailure()
+                getGithubUser('hally9k'),
+                getGithubUserFailure()
             ]);
         });
     });

@@ -1,16 +1,15 @@
-import * as starwarsActions from 'actions/root/starwars/starwars.actions';
-import { ajax } from 'rxjs/observable/dom/ajax';
-import { Observable } from 'rxjs/Observable';
+import {
+    FETCH_PEOPLE,
+    fetchPeopleFailure,
+    fetchPeopleSuccess
+} from 'actions/root/starwars/starwars.actions';
 
-const starwars = (action$) =>
-      action$.ofType(starwarsActions.FETCH_PEOPLE)
-      .mergeMap(() =>
-         ajax
-            .getJSON('https://swapi.co/api/people/')
-            .map((response) => {
-                return starwarsActions.fetchPeopleSuccess(response.results);
-            })
-            .catch((error) => Observable.of(starwarsActions.fetchPeopleFailure(error)))
-       );
+const starwarsEpic = (action$) =>
+    action$.ofType(FETCH_PEOPLE).mergeMap(() =>
+        fetch('https://swapi.co/api/people/')
+            .then((response) => response.json())
+            .then((response) => fetchPeopleSuccess(response.results))
+            .catch((error) => fetchPeopleFailure(error))
+    );
 
-export default starwars;
+export default starwarsEpic;

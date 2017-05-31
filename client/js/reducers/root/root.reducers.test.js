@@ -17,7 +17,7 @@ describe('Root reducer default', () => {
     });
 });
 
-describe('Root reducer getgithubUserSuccess', () => {
+describe('Root reducer getGithubUserSuccess', () => {
     it('should set the given user in the app state', () => {
         const user = {
             avatar_url: '', // eslint-disable-line camelcase
@@ -34,7 +34,7 @@ describe('Root reducer getgithubUserSuccess', () => {
     });
 });
 
-describe('Root reducer getgithubUserFailure', () => {
+describe('Root reducer getGithubUserFailure', () => {
     it('should set the error in the app state', () => {
         const error = {
             message: 'ajax error 404'
