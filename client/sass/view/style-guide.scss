@@ -1,31 +1,23 @@
 /*
     Style Guide
-    - .style-guide-section
-    - .style-guide-lines
+    - .style-section
     - .style-guide-colours
     - .style-guide-icons
  */
-
-body {
-    background-color: $color-light-shade-1;
-}
-
-.style-guide {
-    margin-top: rem(40);
-    margin-bottom: rem(40);
-}
-
 .style-guide-section {
-    padding: rem(20);
     margin-bottom: rem(40);
-
-    background-color: $color-light;
-
-    box-shadow: 0 10px 30px $color-shadow-primary;
 }
 
-.button-section .button {
-    vertical-align: top;
+.style-guide-buttons {
+
+    // Elements
+    .button-group {
+        margin-bottom: rem(20);
+    }
+
+    .button {
+        vertical-align: top;
+    }
 }
 
 .style-guide-lines {
@@ -47,7 +39,11 @@ body {
         }
 
 
-        // Types
+        // Sizes
+        &.x-large::after {
+            content: ': ' '$constrain-width-x-large' 'px';
+        }
+
         &.large::after {
             content: ': ' '$constrain-width-large' 'px';
         }
@@ -85,6 +81,8 @@ body {
 
         padding-bottom: rem(40);
         overflow: hidden;
+
+        color: $color-light;
 
         border-radius: rem(3);
 
@@ -138,7 +136,7 @@ body {
 
 
         // Colours
-        &.primary .item-inner {
+        &.colour-primary .item-inner {
             background-color: $color-primary;
 
 
@@ -156,9 +154,7 @@ body {
             }
         }
 
-        &.dark .item-inner {
-            color: $color-light;
-
+        &.colour-dark .item-inner {
             background-color: $color-dark;
 
 
@@ -172,7 +168,7 @@ body {
             }
         }
 
-        &.light .item-inner {
+        &.colour-light .item-inner {
             background-color: $color-light;
 
             .title::after {
@@ -181,48 +177,6 @@ body {
 
             .shade-1 {
                 background-color: $color-light-shade-1;
-            }
-        }
-
-        &.success .item-inner {
-            background-color: $color-success;
-
-
-            // Elements
-            .title::after {
-                content: '$color-success';
-            }
-
-            .shade-1 {
-                background-color: $color-success-shade-1;
-            }
-        }
-
-        &.warning .item-inner {
-            background-color: $color-warning;
-
-
-            // Elements
-            .title::after {
-                content: '$color-warning';
-            }
-
-            .shade-1 {
-                background-color: $color-warning-shade-1;
-            }
-        }
-
-        &.error .item-inner {
-            background-color: $color-error;
-
-
-            // Elements
-            .title::after {
-                content: '$color-error';
-            }
-
-            .shade-1 {
-                background-color: $color-error-shade-1;
             }
         }
     }
@@ -234,7 +188,7 @@ body {
 
     .title::after,
     .child {
-        font-size: 12px;
+        font-size: rem(12);
     }
 
     .title {

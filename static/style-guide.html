@@ -23,7 +23,7 @@
 
                 <!-- Colours -->
                 <div class="style-guide-colours" role="group">
-                    <div class="item primary">
+                    <div class="item colour-primary">
                         <div class="item-inner">
                             <p class="title">Primary</p>
                             <ul class="variations">
@@ -32,7 +32,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="item small dark">
+                    <div class="item small colour-dark">
                         <div class="item-inner">
                             <p class="title">Dark</p>
                             <ul class="variations">
@@ -40,33 +40,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="item small outline light">
+                    <div class="item small outline colour-light">
                         <div class="item-inner">
                             <p class="title">Light</p>
-                            <ul class="variations">
-                                <li class="shade-1"></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item small success">
-                        <div class="item-inner">
-                            <p class="title">Success</p>
-                            <ul class="variations">
-                                <li class="shade-1"></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item small warning">
-                        <div class="item-inner">
-                            <p class="title">Warning</p>
-                            <ul class="variations">
-                                <li class="shade-1"></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item small error">
-                        <div class="item-inner">
-                            <p class="title">Error</p>
                             <ul class="variations">
                                 <li class="shade-1"></li>
                             </ul>
@@ -170,45 +146,48 @@
                 </div>
             </section>
 
-            <section class="style-guide-section || button-section || constrain-width">
+            <section class="style-guide-section || style-guide-buttons || constrain-width">
                 <h2>Buttons</h2>
                 <hr />
 
                 <!-- Buttons: primary, secondary, disabled -->
-                <p>Default<br>
-                    <a class="button large" href="#">Button</a>
+                <div role="group" class="button-group">
+                    <a class="button large" href="#">Large Button</a>
                     <a class="button" href="#">Button</a>
-                    <a class="button small" href="#">Button</a>
+                    <a class="button small" href="#">Small Button</a>
+                </div>
+                <div role="group" class="button-group">
                     <a class="button is-disabled">Disabled Button</a>
-
-                    <br>
-
-                    <button type="button" class="button">Button</button>
                     <button type="button" class="button" disabled>Disabled Button</button>
-
-                    <br>
-
-                    <button type="button" class="button">
+                </div>
+                <div role="group" class="button-group">
+                    <a class="button large" href="#">
                         <svg class="icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
                             <title>Arrow</title>
                             <use xlink:href="/icons/sprite.svg#arrow"></use>
                         </svg>
-                        Button with icon
-                    </button>
-
-                    <button type="button" class="button">
-                        Button with icon
-                        <svg class="icon right" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                        Large Button
+                    </a>
+                    <a class="button" href="#">
+                        <svg class="icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
                             <title>Arrow</title>
                             <use xlink:href="/icons/sprite.svg#arrow"></use>
                         </svg>
-                    </button>
-                </p>
-                <p>Primary<br>
+                        Button
+                    </a>
+                    <a class="button small" href="#">
+                        <svg class="icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                            <title>Arrow</title>
+                            <use xlink:href="/icons/sprite.svg#arrow"></use>
+                        </svg>
+                        Small Button
+                    </a>
+                </div>
+                <div role="group" class="button-group">
                     <a class="button primary large" href="#">Primary Button (L)</a>
                     <a class="button primary" href="#">Primary Button</a>
                     <a class="button primary small" href="#">Primary Button (S)</a>
-                </p>
+                </div>
             </section>
             <section class="style-guide-section || constrain-width">
                 <h2>Close Button</h2>
@@ -243,7 +222,7 @@
                 <!-- Blockquote -->
                 <blockquote>
                     <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-                    <cite>Author's Name, 2020</cite>
+                    <footer>Author's Name, 2020, <cite>The source</cite></footer>
                 </blockquote>
             </section>
 
@@ -253,6 +232,7 @@
 
                 <!-- Constrain Widths -->
                 <div class="style-guide-lines">
+                    <p class="constrain-width x-large">X Large</p>
                     <p class="constrain-width large">Large</p>
                     <p class="constrain-width">Normal</p>
                     <p class="constrain-width medium">Medium</p>

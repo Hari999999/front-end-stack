@@ -31,8 +31,8 @@
     Asset Locations
     - No quotes, causes issues with Webpack -
  */
-$folder-image: /images;
-$folder-icon: /icons;
+$folder-image:    /images;
+$folder-icon:     /icons;
 
 
 
@@ -53,12 +53,10 @@ $folder-icon: /icons;
     Color names generated at http://chir.ag/projects/name-that-color/
  */
 $color-black:               rgb(0, 0, 0);
-$color-midnight:            rgb(60, 60, 60);
+$color-midnight:            rgb(40, 40, 40);
 $color-concrete:            rgb(230, 230, 230);
 $color-white:               rgb(255, 255, 255);
 $color-limbo:               rgb(62, 104, 204);
-$color-grass:               rgb(112, 226, 92);
-$color-tiger:               rgb(245, 162, 56);
 $color-monza:               rgb(216, 69, 77);
 
 $color-primary-tint-1:      color($color-limbo tint(20%));
@@ -70,15 +68,6 @@ $color-dark-tint-1:         $color-midnight;
 
 $color-light-shade-1:       $color-concrete;
 $color-light:               $color-white;
-
-$color-success:             $color-grass;
-$color-success-shade-1:     color($color-grass shade(10%));
-
-$color-warning:             $color-tiger;
-$color-warning-shade-1:     color($color-tiger shade(10%));
-
-$color-error:               $color-monza;
-$color-error-shade-1:       color($color-monza shade(10%));
 
 $color-shadow-primary:      color($color-dark alpha(20%));
 
@@ -93,16 +82,17 @@ $font-arial: 'Arial', sans-serif;
 
 $font-primary: $font-arial;
 
-$weight-light:   300;
-$weight-regular: 400;
-$weight-bold:    500;
+$weight-light:       300;
+$weight-regular:     400;
+$weight-bold:        500;
 
 
 
 /*
     Widths
  */
-$constrain-width-large:   1400;
-$constrain-width:         960;
-$constrain-width-medium:  740;
-$constrain-width-small:   600;
+$constrain-width-x-large:   1600;
+$constrain-width-large:     1400;
+$constrain-width:           960;
+$constrain-width-medium:    740;
+$constrain-width-small:     600;

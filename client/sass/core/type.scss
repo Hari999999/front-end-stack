@@ -56,8 +56,21 @@ em {
     font-style: italic;
 }
 
+
+// Quote
 blockquote,
 q {
+    quotes: '“' '”' '‘' '’';
+
+
+    // Elements
+    p::before {
+        content: open-quote;
+    }
+
+    p::after {
+        content: close-quote;
+    }
 }
 
 cite {
