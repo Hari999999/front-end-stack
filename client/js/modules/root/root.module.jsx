@@ -1,6 +1,6 @@
 import GithubUser from 'components/github-user.component';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-const PropTypes = React.PropTypes;
 
 class Root extends Component {
 

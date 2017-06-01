@@ -69,6 +69,7 @@
     "jest": "^20.0.4",
     "jest-fetch-mock": "https://github.com/hally9k/jest-fetch-mock",
     "normalize.css": "^5.0.0",
+    "prop-types": "^15.5.10",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",

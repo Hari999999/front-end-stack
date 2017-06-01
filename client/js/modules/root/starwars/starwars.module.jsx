@@ -1,8 +1,7 @@
 import ErrorBlock from 'components/error-block.component';
+import PropTypes from 'prop-types';
 import ReactTable from 'react-table';
 import React, { Component } from 'react';
-
-const PropTypes = React.PropTypes;
 
 const columns = [
     {
