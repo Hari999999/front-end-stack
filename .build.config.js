@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const { API_URL, SENTRY_DSN, SENTRY_DISABLED } = process.env;
+const { SENTRY_DSN, SENTRY_DISABLED } = process.env;
 
 // Config for the `front-end-scripts` package
 module.exports = {
