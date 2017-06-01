@@ -1,8 +1,8 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import StarWars from 'components/starwars/starwars.component';
+import StarWars from 'components/starwars.component';
 
-function setup(testKey) { // eslint-disable-line
+function setup(testKey) {
     const props = {
         people: {
             fetchStarWarsPeople: jest.fn(),
