@@ -1,3 +1,4 @@
+import Navigation from 'components/navigation.component';
 import Ping from 'modules/root/ping/ping.container';
 import React from 'react';
 import Root from 'modules/root/root.container';
@@ -6,8 +7,8 @@ import StarWars from 'modules/root/starwars/starwars.container';
 
 export default
 <div>
-    <Route path="/" exact render={ () => <h1>Root</h1> }></Route>
-    <Route path="/github" component={Root}></Route>
-    <Route path="/ping" component={Ping}></Route>
-    <Route path="/starwars" component={StarWars}></Route>
+    <Route path="/" component={Navigation}></Route>
+    <Route path="/github" exact component={Root}></Route>
+    <Route path="/ping" exact component={Ping}></Route>
+    <Route path="/starwars" exact component={StarWars}></Route>
 </div>;
