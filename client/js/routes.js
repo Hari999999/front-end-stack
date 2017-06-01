@@ -1,19 +1,14 @@
 import Github from 'components/github/github.container';
-import Ping from 'components/ping/ping.container';
+import Navigation from 'components/partial/navigation.component';
+import Ping from 'components/ping.container';
 import React from 'react';
-import StarWars from 'components/starwars/starwars.container';
-import { Link, Route, Switch } from 'react-router';
-
-const nav = <div>
-    <Link to="/github">github</Link> •
-    <Link to="/ping">ping</Link> •
-    <Link to="/starwars">starwars</Link>
-</div>;
+import { Route } from 'react-router';
+import StarWars from 'components/starwars.container';
 
 export default
-<Switch>
-    <Route path="/" component={nav} />
-    <Route path="/" component={Github} />
+<div>
+    <Route path="/" component={Navigation} />
+    <Route path="/github" exact component={Github} />
     <Route path="/ping" exact component={Ping} />
     <Route path="/starwars" exact component={StarWars} />
-</Switch>;
+</div>;
