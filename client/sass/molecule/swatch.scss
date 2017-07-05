@@ -1,0 +1,143 @@
+/*
+    Swatch
+ */
+.swatch {
+    padding-right: rem(5);
+    padding-left: rem(5);
+    margin-bottom: rem(10);
+
+
+    // Types
+    &.outline .swatch-inner {
+        color: $color-dark;
+
+        border: 1px solid $color-dark;
+
+
+        // Elements
+        .title::after {
+            color: $color-dark;
+        }
+    }
+
+
+    // Sizes
+    &.small {
+        flex-grow: 0;
+
+        @media (--from-tiny-screen-w) {
+            flex-basis: 50%;
+        }
+
+        @media (--from-medium-screen-w) {
+            flex-basis: 25%;
+        }
+    }
+
+
+    // Colours
+    &.colour-primary .swatch-inner {
+        background-color: $color-primary;
+
+
+        // Elements
+        .title::after {
+            content: '$color-primary';
+        }
+
+        .tint-1 {
+            background-color: $color-primary-tint-1;
+        }
+
+        .shade-1 {
+            background-color: $color-primary-shade-1;
+        }
+    }
+
+    &.colour-dark .swatch-inner {
+        background-color: $color-dark;
+
+
+        // Elements
+        .title::after {
+            content: '$color-dark';
+        }
+
+        .tint-1 {
+            background-color: $color-dark-tint-1;
+        }
+    }
+
+    &.colour-light .swatch-inner {
+        background-color: $color-light;
+
+        .title::after {
+            content: '$color-light';
+        }
+
+        .shade-1 {
+            background-color: $color-light-shade-1;
+        }
+    }
+
+
+    // Elements
+    &-inner {
+        position: relative;
+
+        padding-bottom: rem(40);
+        overflow: hidden;
+
+        color: $color-light;
+
+        border-radius: rem(3);
+
+        @media (--from-small-screen-w) {
+            padding-bottom: rem(60);
+        }
+    }
+
+    &-child,
+    &-title {
+        margin-bottom: 0;
+    }
+
+    &-child,
+    &-title::after {
+        font-size: rem(12);
+    }
+
+    &-child {
+        padding: rem(10) rem(20);
+    }
+
+    &-title {
+        padding: rem(20);
+
+        &::after {
+            display: block;
+
+            text-transform: uppercase;
+
+            opacity: 0.8;
+        }
+    }
+
+    &-variations {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    &-variation {
+        flex-basis: 50%;
+        height: rem(14);
+    }
+}

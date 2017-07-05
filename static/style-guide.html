@@ -22,29 +22,29 @@
                 <hr>
 
                 <!-- Colours -->
-                <div class="style-guide-colours" role="group">
-                    <div class="item colour-primary">
-                        <div class="item-inner">
-                            <p class="title">Primary</p>
-                            <ul class="variations">
-                                <li class="shade-1"></li>
-                                <li class="tint-1"></li>
+                <div class="style-guide-swatches" role="group">
+                    <div class="swatch colour-primary">
+                        <div class="swatch-inner">
+                            <p class="swatch-title">Primary</p>
+                            <ul class="swatch-variations">
+                                <li class="swatch-variation shade-1"></li>
+                                <li class="swatch-variation tint-1"></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="item small colour-dark">
-                        <div class="item-inner">
-                            <p class="title">Dark</p>
-                            <ul class="variations">
-                                <li class="tint-1"></li>
+                    <div class="swatch small colour-dark">
+                        <div class="swatch-inner">
+                            <p class="swatch-title">Dark</p>
+                            <ul class="swatch-variations">
+                                <li class="swatch-variation tint-1"></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="item small outline colour-light">
-                        <div class="item-inner">
-                            <p class="title">Light</p>
-                            <ul class="variations">
-                                <li class="shade-1"></li>
+                    <div class="swatch small outline colour-light">
+                        <div class="swatch-inner">
+                            <p class="swatch-title">Light</p>
+                            <ul class="swatch-variations">
+                                <li class="swatch-variation shade-1"></li>
                             </ul>
                         </div>
                     </div>
@@ -70,11 +70,30 @@
             </section>
 
             <section class="style-guide-section || constrain-width">
+                <h2>Lists</h2>
+                <hr />
+
+                <!-- Lists: strong, em, a -->
+                <ul>
+                    <li>Duis autem vel eum <strong>iriure dolor in hendrerit</strong> in vulputate velit esse molestie consequat.</li>
+                    <li>Vel illum dolore eu <em>feugiat nulla</em> facilisis at vero eros et accumsan et iusto odio dignissim qui blandit.</li>
+                    <li>Praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</li>
+                    <li>Nimperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus <a href="#">legentis in iis qui facit</a> eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</li>
+                </ul>
+                <ol>
+                    <li>Duis autem vel eum <strong>iriure dolor in hendrerit</strong> in vulputate velit esse molestie consequat.</li>
+                    <li>Vel illum dolore eu <em>feugiat nulla</em> facilisis at vero eros et accumsan et iusto odio dignissim qui blandit.</li>
+                    <li>Praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</li>
+                    <li>Nimperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus <a href="#">legentis in iis qui facit</a> eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</li>
+                </ol>
+            </section>
+
+            <section class="style-guide-section || constrain-width">
                 <h2>Social Icons</h2>
                 <hr />
 
                 <!-- Social Icons -->
-                <div class="icons">
+                <div class="style-guide-icons">
                     <svg width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
                         <title>Apple</title>
                         <use xlink:href="/icons/social/sprite.svg#apple"></use>
@@ -146,73 +165,62 @@
                 </div>
             </section>
 
-            <section class="style-guide-section || style-guide-buttons || constrain-width">
+            <section class="style-guide-section | || constrain-width">
                 <h2>Buttons</h2>
                 <hr />
 
                 <!-- Buttons: primary, secondary, disabled -->
-                <div role="group" class="button-group">
-                    <a class="button large" href="#">Large Button</a>
-                    <a class="button" href="#">Button</a>
-                    <a class="button small" href="#">Small Button</a>
+                <h4 class="style-guide-sub-heading">Default</h4>
+                <div role="group" class="style-guide-button-group">
+                    <a class="button large" href="#">Default Large</a>
+                    <a class="button" href="#">Default Button</a>
+                    <a class="button small" href="#">Default Small</a>
                 </div>
-                <div role="group" class="button-group">
+
+                <h4 class="style-guide-sub-heading">Disabled</h4>
+                <div role="group" class="style-guide-button-group">
                     <a class="button is-disabled">Disabled Button</a>
                     <button type="button" class="button" disabled>Disabled Button</button>
                 </div>
-                <div role="group" class="button-group">
+
+                <h4 class="style-guide-sub-heading">Default with icon</h4>
+                <div role="group" class="style-guide-button-group">
                     <a class="button large" href="#">
-                        <svg class="icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                        <svg class="button-icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
                             <title>Arrow</title>
                             <use xlink:href="/icons/sprite.svg#arrow"></use>
                         </svg>
                         Large Button
                     </a>
                     <a class="button" href="#">
-                        <svg class="icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                        <svg class="button-icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
                             <title>Arrow</title>
                             <use xlink:href="/icons/sprite.svg#arrow"></use>
                         </svg>
                         Button
                     </a>
                     <a class="button small" href="#">
-                        <svg class="icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
+                        <svg class="button-icon left" width="40" height="40" viewbox="0 0 40 40" aria-hidden="true" focusable="false">
                             <title>Arrow</title>
                             <use xlink:href="/icons/sprite.svg#arrow"></use>
                         </svg>
                         Small Button
                     </a>
                 </div>
-                <div role="group" class="button-group">
-                    <a class="button primary large" href="#">Primary Button (L)</a>
-                    <a class="button primary" href="#">Primary Button</a>
-                    <a class="button primary small" href="#">Primary Button (S)</a>
+
+                <h4 class="style-guide-sub-heading">Primary</h4>
+                <div role="group" class="style-guide-button-group">
+                    <a class="button primary large" href="#">Primary (Large)</a>
+                    <a class="button primary" href="#">Primary</a>
+                    <a class="button primary small" href="#">Primary (Small)</a>
                 </div>
+
             </section>
             <section class="style-guide-section || constrain-width">
                 <h2>Close Button</h2>
                 <hr />
 
                 <button type="button" class="close-button">Close</button>
-            </section>
-
-            <section class="style-guide-section || constrain-width">
-                <h2>Lists</h2>
-                <hr />
-
-                <!-- Lists: strong, em, a -->
-                <ul>
-                    <li>Duis autem vel eum <strong>iriure dolor in hendrerit</strong> in vulputate velit esse molestie consequat.</li>
-                    <li>Vel illum dolore eu <em>feugiat nulla</em> facilisis at vero eros et accumsan et iusto odio dignissim qui blandit.</li>
-                    <li>Praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</li>
-                    <li>Nimperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus <a href="#">legentis in iis qui facit</a> eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</li>
-                </ul>
-                <ol>
-                    <li>Duis autem vel eum <strong>iriure dolor in hendrerit</strong> in vulputate velit esse molestie consequat.</li>
-                    <li>Vel illum dolore eu <em>feugiat nulla</em> facilisis at vero eros et accumsan et iusto odio dignissim qui blandit.</li>
-                    <li>Praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</li>
-                    <li>Nimperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus <a href="#">legentis in iis qui facit</a> eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</li>
-                </ol>
             </section>
 
             <section class="style-guide-section || constrain-width">
@@ -232,11 +240,11 @@
 
                 <!-- Constrain Widths -->
                 <div class="style-guide-lines">
-                    <p class="constrain-width no-pad x-large">X Large</p>
-                    <p class="constrain-width no-pad large">Large</p>
-                    <p class="constrain-width no-pad">Default</p>
-                    <p class="constrain-width no-pad medium">Medium</p>
-                    <p class="constrain-width no-pad small">Small</p>
+                    <h4 class="style-guide-sub-heading || style-guide-line || constrain-width no-pad x-large">X Large</h4>
+                    <h4 class="style-guide-sub-heading || style-guide-line || constrain-width no-pad large">Large</h4>
+                    <h4 class="style-guide-sub-heading || style-guide-line || constrain-width no-pad">Default</h4>
+                    <h4 class="style-guide-sub-heading || style-guide-line || constrain-width no-pad medium">Medium</h4>
+                    <h4 class="style-guide-sub-heading || style-guide-line || constrain-width no-pad small">Small</h4>
                 </div>
             </section>
 

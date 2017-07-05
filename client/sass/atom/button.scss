@@ -27,9 +27,12 @@ a.button,
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: rem(10) rem(15);
+    height: rem(40);
+    padding-right: rem(15);
+    padding-left: rem(15);
 
     color: $color-light;
+    line-height: rem(20);
 
     background-color: $color-dark;
     border: 1px solid currentColor;
@@ -57,18 +60,36 @@ a.button,
         width: 100%;
     }
 
+
+    // Sizes
     &.small {
-        padding: rem(6) rem(10);
+        height: rem(30);
+        padding-right: rem(10);
+        padding-left: rem(10);
 
         font-size: rem(14);
+
+        .button-icon {
+            width: rem(20);
+            height: rem(20);
+        }
     }
 
     &.large {
-        padding: rem(15) rem(30);
+        height: rem(50);
+        padding-right: rem(30);
+        padding-left: rem(30);
 
         font-size: rem(18);
+
+        .button-icon {
+            width: rem(40);
+            height: rem(40);
+        }
     }
 
+
+    // Themes
     &.inverse {
         color: $color-dark;
 
@@ -80,8 +101,6 @@ a.button,
         }
     }
 
-
-    // Themes
     &.primary {
         background-color: $color-primary;
 
@@ -94,12 +113,14 @@ a.button,
 
 
     // Elements
-    .icon {
+    &-icon {
         display: flex;
         align-items: center;
         flex-grow: 0;
         flex-shrink: 0;
         justify-content: space-between;
+        width: rem(30);
+        height: rem(30);
 
 
         // Types
