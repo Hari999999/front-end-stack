@@ -20,7 +20,7 @@
 
         @media (--from-tiny-screen-w) {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap; // IE requires max-width on children
         }
 
 
@@ -29,11 +29,13 @@
             flex-basis: 100%;
 
             @media (--from-small-screen-w) {
-                flex-basis: 25%;
+                flex-basis: calc(100% / 4);
+                max-width: calc(100% / 4);
             }
 
             @media (--from-medium-screen-w) {
                 flex-basis: calc(100% / 3);
+                max-width: calc(100% / 3);
             }
         }
     }
