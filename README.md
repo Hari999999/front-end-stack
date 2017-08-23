@@ -12,16 +12,18 @@ Used by the Front End team at [Pixel Fusion](https://pixelfusion.co.nz), a Produ
 - Yarn > 0.18.0 (`brew install yarn`)
 
 
-## Repo Development Architecture
-
+## Repository Branch Architecture
 The repository is divided into three branch categories: Feature, Hotfix, Iteration, Test
 
-Feature: Should be used for developing any feature e.g `feature/add-webpack-dashboard`
-Iteration: Used for different iterations e.g `feature/redux-ducks`
+#### Branch Categories
+- **Feature**: Should be used for developing any feature e.g `feature/button-style`
+- **Iteration**: Used for different build iterations but keep the same CSS Architecture e.g `iteration/redux-ducks`
+- **Hotfix**: Used for bug fixing in either iteration or feature branches e.g `hotfix/button-alignment` or `iteration/redux-ducks/hotfix/router`
+- **Test**: Create testing branches in either root or iterations for shared experiments. `text/chunking-experiment`
 
-Current Iterations:
-- Redux Ducks
-- Redux Module State Hierarchy
+#### Active Iterations:
+- [Redux Ducks](https://github.com/pixelfusion/front-end-stack/tree/iteration/redux-ducks)
+- [Redux Module State Hierarchy](https://github.com/pixelfusion/front-end-stack/tree/iteration/redux-module-state-hierarchy)
 
 
 ## Installing
