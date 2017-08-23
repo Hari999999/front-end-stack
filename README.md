@@ -12,6 +12,18 @@ Used by the Front End team at [Pixel Fusion](https://pixelfusion.co.nz), a Produ
 - Yarn > 0.18.0 (`brew install yarn`)
 
 
+## Repo Development Architecture
+
+The repository is divided into three branch categories: Feature, Hotfix, Iteration, Test
+
+Feature: Should be used for developing any feature e.g `feature/add-webpack-dashboard`
+Iteration: Used for different iterations e.g `feature/redux-ducks`
+
+Current Iterations:
+- Redux Ducks
+- Redux Module State Hierarchy
+
+
 ## Installing
 Run `yarn install` to install the project.
 

@@ -1,29 +1,7 @@
 /*
     Button
  */
-button[type='button'],
-button[type='submit'] {
-    padding: 0;
-
-    line-height: 1;
-    white-space: nowrap;
-
-    cursor: pointer;
-    background: none;
-    border: none;
-
-    appearance: none;
-}
-
-a.button {
-    line-height: 1;
-
-    text-decoration: none;
-}
-
-a.button,
-.button[type='button'],
-.button[type='submit'] {
+.button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
