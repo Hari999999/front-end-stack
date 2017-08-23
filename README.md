@@ -11,20 +11,22 @@ Used by the Front End team at [Pixel Fusion](https://pixelfusion.co.nz), a Produ
 - NPM > 4.0.0 (installed as part of Node.js)
 - Yarn > 0.18.0 (`brew install yarn`)
 
+---
 
-## Repository Branch Architecture
-The repository is divided into three branch categories: Feature, Hotfix, Iteration, Test
+## Branch Architecture
+The repository is divided into three branch categories: Feature, Hotfix, Iteration, Test. Both Feature and Hotfix branches should be directly linked to an open issue: [FESt/issues](https://github.com/pixelfusion/front-end-stack/issues)
 
 #### Branch Categories
 - **Feature**: Should be used for developing any feature e.g `feature/button-style`
-- **Iteration**: Used for different build iterations but keep the same CSS Architecture e.g `iteration/redux-ducks`
 - **Hotfix**: Used for bug fixing in either iteration or feature branches e.g `hotfix/button-alignment` or `iteration/redux-ducks/hotfix/router`
+- **Iteration**: Used for different build iterations but keep the same CSS Architecture e.g `iteration/redux-ducks`
 - **Test**: Create testing branches in either root or iterations for shared experiments. `text/chunking-experiment`
 
 #### Active Iterations:
 - [Redux Ducks](https://github.com/pixelfusion/front-end-stack/tree/iteration/redux-ducks)
 - [Redux Module State Hierarchy](https://github.com/pixelfusion/front-end-stack/tree/iteration/redux-module-state-hierarchy)
 
+---
 
 ## Installing
 Run `yarn install` to install the project.
@@ -62,6 +64,7 @@ To run the Jest unit tests, use the following command:
 
 	yarn test
 
+---
 
 ## Browser Support
 Supported and tested in the following browsers:
@@ -93,5 +96,6 @@ Our base HTML is inspired by:
 
 
 ## Debugging (TODO)
-`front-end-scripts build --linked`
-`front-end-scripts start --linked`
+
+- `front-end-scripts build --linked`
+- `front-end-scripts start --linked`
