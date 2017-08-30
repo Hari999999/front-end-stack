@@ -6,6 +6,8 @@
 
 
 // Core
+@import 'core/form.scss';
+@import 'core/heading.scss';
 @import 'core/layout.scss';
 @import 'core/media.scss';
 @import 'core/page.scss';
@@ -17,22 +19,16 @@
 @import 'atom/close-button.scss';
 @import 'atom/input.scss';
 @import 'atom/line.scss';
-@import 'atom/option.scss';
 @import 'atom/section.scss';
-@import 'atom/status-message.scss';
-@import 'atom/tool-tip.scss';
 
 
 // Molecules
-@import 'molecule/form.scss';
 @import 'molecule/navigation.scss';
-@import 'molecule/error-block.scss';
+@import 'molecule/swatch.scss';
 
 
 // Organisms
 @import 'organism/footer.scss';
-@import 'organism/github-user.scss';
-@import 'organism/table.scss';
 @import 'organism/header.scss';
 
 

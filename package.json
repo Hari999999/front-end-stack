@@ -6,10 +6,11 @@
   "private": true,
   "repository": "pixelfusion/front-end-stack",
   "homepage": "https://github.com/pixelfusion/front-end-stack#readme",
-  "author": "Te Riu Warren <te@pixelfusion.co.nz>",
+  "author": "Tia Aoake <tia@pixelfusion.co.nz>",
   "contributors": [
-    "Hal Smith Stevens <hal@pixelfusion.co.nz>",
-    "Tia Aoake <tia@pixelfusion.co.nz>"
+    "Josh Post <josh@pixelfusion.co.nz>",
+    "Anton  Vasetenekov<anton@pixelfusion.co.nz>",
+    "Damian Redpath <damian@pixelfusion.co.nz>"
   ],
   "bugs": {
     "url": "https://github.com/pixelfusion/front-end-stack/issues"
