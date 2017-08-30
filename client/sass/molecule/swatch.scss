@@ -15,7 +15,7 @@
 
 
         // Elements
-        .title::after {
+        .swatch-title::after {
             color: $color-dark;
         }
     }
@@ -41,7 +41,7 @@
 
 
         // Elements
-        .title::after {
+        .swatch-title::after {
             content: '$color-primary';
         }
 
@@ -59,7 +59,7 @@
 
 
         // Elements
-        .title::after {
+        .swatch-title::after {
             content: '$color-dark';
         }
 
@@ -71,7 +71,7 @@
     &.colour-light .swatch-inner {
         background-color: $color-light;
 
-        .title::after {
+        .swatch-title::after {
             content: '$color-light';
         }
 
@@ -111,8 +111,12 @@
         padding: rem(10) rem(20);
     }
 
-    &-title {
+    &-title, {
         padding: rem(20);
+    }
+
+    &-title,
+    &-variation {
 
         &::after {
             display: block;
@@ -138,6 +142,6 @@
 
     &-variation {
         flex-basis: 50%;
-        height: rem(14);
+        height: rem(20);
     }
 }
