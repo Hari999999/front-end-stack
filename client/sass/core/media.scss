@@ -1,19 +1,15 @@
 /*
     Media
+    - Image
+    - Iframe
+    - SVG
  */
-picture,
-img,
-svg {
-    max-width: 100%;
-}
-
+// Image
 picture,
 img {
     display: block;
-}
-
-img {
     height: auto;
+    max-width: 100%;
 }
 
 figure {
@@ -21,8 +17,15 @@ figure {
 }
 
 
+// Iframe
 iframe {
     width: 100%;
+}
+
+
+// SVG
+svg {
+    max-width: 100%;
 }
 
 use {

@@ -1,5 +1,9 @@
 /*
     Type
+    - Normal text
+    - Quote
+    - Address
+    - Link
  */
 html {
     font-family: $font-primary;
@@ -26,14 +30,15 @@ em {
     font-style: italic;
 }
 
+small {
+}
+
 
 // Quote
 blockquote,
 q {
     quotes: '“' '”' '‘' '’';
 
-
-    // Elements
     p::before {
         content: open-quote;
     }
@@ -46,10 +51,9 @@ q {
 cite {
 }
 
-address {
-}
 
-small {
+// Address
+address {
 }
 
 

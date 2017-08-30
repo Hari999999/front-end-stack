@@ -18,8 +18,6 @@ textarea {
     box-shadow: none; // Reset for Firefox
     outline: none;
 
-    appearance: none;
-
 
     // States
     &:focus {
@@ -38,12 +36,4 @@ textarea {
     &::placeholder {
 
     }
-}
-
-textarea {
-    max-height: rem(300);
-}
-
-select {
-    height: rem(40);
 }
