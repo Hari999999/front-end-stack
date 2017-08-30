@@ -1,11 +1,9 @@
 /*
     Swatch
  */
-.swatch {
-    padding-right: rem(5);
-    padding-left: rem(5);
-    margin-bottom: rem(10);
+$--grid-spacing: 20;
 
+.swatch {
 
     // Types
     &.outline .swatch-inner {
