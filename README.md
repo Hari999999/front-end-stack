@@ -40,6 +40,8 @@ Run `yarn start` to watch and compile the Javascript and SCSS files. The project
     - Autoprefixer, to take care of those pesky prefixes...which are [being phased out](https://webkit.org/blog/6131/updating-our-prefixing-policy/)!
 - Jest, to handle Unit testing of the Javascript.
 
+View the Style Guide at `https://localhost:3000/style-guide.html`
+
 
 ## Building
 Run `yarn build` to create a production ready `public` folder with all necessary assets.
