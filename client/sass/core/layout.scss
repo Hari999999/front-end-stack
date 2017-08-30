@@ -5,19 +5,32 @@
 
 // Constraint
 .constrain-width {
-    max-width: $constrain-width;
-    padding-right: rem(20);
-    padding-left: rem(20);
-    margin-right: auto;
-    margin-left: auto;
+    max-width: rem($constrain-width);
 
 
     // Types
+    &:not(.no-pad) {
+        padding-right: rem(20);
+        padding-left: rem(20);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    // Sizes
     &.small {
-        max-width: $constrain-width-small;
+        max-width: rem($constrain-width-small);
     }
 
     &.medium {
-        max-width: $constrain-width-medium;
+        max-width: rem($constrain-width-medium);
+    }
+
+    &.large {
+        max-width: rem($constrain-width-large);
+    }
+
+    &.x-large {
+        max-width: rem($constrain-width-x-large);
     }
 }

@@ -6,10 +6,11 @@
   "private": true,
   "repository": "pixelfusion/front-end-stack",
   "homepage": "https://github.com/pixelfusion/front-end-stack#readme",
-  "author": "Te Riu Warren <te@pixelfusion.co.nz>",
+  "author": "Tia Aoake <tia@pixelfusion.co.nz>",
   "contributors": [
-    "Hal Smith Stevens <hal@pixelfusion.co.nz>",
-    "Tia Aoake <tia@pixelfusion.co.nz>"
+    "Josh Post <josh@pixelfusion.co.nz>",
+    "Anton  Vasetenekov<anton@pixelfusion.co.nz>",
+    "Damian Redpath <damian@pixelfusion.co.nz>"
   ],
   "bugs": {
     "url": "https://github.com/pixelfusion/front-end-stack/issues"
@@ -55,6 +56,7 @@
     "eslint-plugin-filenames": "^1.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.8.0",
+    "front-end-scripts": "^2.0.0",
     "husky": "^0.12.0",
     "stylelint": "^7.7.0"
   },
