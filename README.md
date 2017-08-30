@@ -20,7 +20,7 @@ The repository is divided into three branch categories: Feature, Hotfix, Iterati
 - **Feature**: Should be used for developing any feature e.g `feature/button-style`
 - **Hotfix**: Used for bug fixing in either iteration or feature branches e.g `hotfix/button-alignment` or `iteration/redux-ducks/hotfix/router`
 - **Iteration**: Used for different build iterations but keep the same CSS Architecture e.g `iteration/redux-ducks`
-- **Test**: Create testing branches in either root or iterations for shared experiments. `text/chunking-experiment`
+- **Test**: Create testing branches in either root or iterations for shared experiments. `test/chunking-experiment`
 
 #### Active Iterations:
 - [Redux Ducks](https://github.com/pixelfusion/front-end-stack/tree/iteration/redux-ducks)
