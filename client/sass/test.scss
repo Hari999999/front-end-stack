@@ -1,0 +1,59 @@
+/*
+    Test
+    - Table
+    - Github User
+    - Error
+ */
+// Table
+.rt-thead {
+    font-weight: 700;
+}
+
+.rt-th {
+    padding: 5px;
+
+    border: 1px solid $color-dark;
+}
+
+.rt-tr {
+    display: flex;
+}
+
+.rt-td {
+    padding: 5px;
+
+    border: 1px solid $color-light-shade-1;
+}
+
+.-pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.-center,
+.-pageInfo {
+    display: flex;
+}
+
+.-loading {
+    display: none;
+}
+
+
+// Error Block
+.error-block {
+    width: 200px;
+
+    text-align: 'center';
+}
+
+.error-message {
+    color: $color-primary;
+}
+
+
+
+// Github user
+.github-user {
+    width: 200px;
+}

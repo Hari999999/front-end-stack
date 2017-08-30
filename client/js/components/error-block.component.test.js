@@ -19,8 +19,8 @@ describe('components', () => {
     describe('ErrorBlock', () => {
         it('should render error when given a an error', () => {
             const { enzymeWrapper } = setup('error');
-            expect(enzymeWrapper.find('div.error-block h1').text()).toBe('😢');
-            expect(enzymeWrapper.find('div.error-block h2').text()).toBe('ajax error 404');
+            expect(enzymeWrapper.find('div.error-block h4').text()).toBe('😢');
+            expect(enzymeWrapper.find('div.error-block p').text()).toBe('Error: ajax error 404');
         });
     });
     it('mounts the component', () => {

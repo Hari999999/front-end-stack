@@ -87,6 +87,7 @@
     "redux-middleware": "^0.1.21",
     "redux-mock-store": "^1.2.3",
     "redux-observable": "^0.14.1",
+    "redux-raven-middleware": "^1.2.0",
     "reselect": "^2.5.4",
     "rxjs": "^5.2.0",
     "svg4everybody": "^2.0.3",

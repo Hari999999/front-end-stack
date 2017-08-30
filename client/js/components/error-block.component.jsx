@@ -6,9 +6,9 @@ class ErrorBlock extends Component {
     render() {
         const { message } = this.props;
         return (
-            <div className="error-block">
-                <h1 style={{ fontSize: '7em' }}>😢</h1>
-                <h2 className="error-message">{message}</h2>
+            <div className="error-block || constrain-width medium">
+                <h4>😢</h4>
+                <p>Error: {message}</p>
             </div>
         );
     }

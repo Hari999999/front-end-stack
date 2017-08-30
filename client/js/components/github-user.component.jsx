@@ -11,17 +11,20 @@ class Root extends Component {
     render() {
         const { error, user } = this.props;
         return (
-            <div>
-                <label>Github User: <input ref={(input) => { this.textInput = input; }} /></label>
-                <button onClick={this.getUser.bind(this)}>Get User</button>
-                { user &&
+            <div className="constrain-width medium">
+                <h4>Github User:</h4>
+                <div className="test-search">
+                    <input ref={(input) => { this.textInput = input; }} />
+                    <button className="button small" onClick={this.getUser.bind(this)}>Get User</button>
+                </div>
+                {user &&
                     <div className="github-user">
                         <img src={user.avatar} />
                         <h2>{user.username}</h2>
                         <h4>ID: {user.id}</h4>
                     </div>
                 }
-                { error && <ErrorBlock message={error.message} /> }
+                {error && <ErrorBlock message={error.message} />}
             </div>
         );
     }

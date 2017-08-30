@@ -3,9 +3,16 @@ import React, { Component } from 'react';
 
 class Ping extends Component {
     render() {
-        return <div>
-            <Link to="/github">github</Link> • <Link to="/ping">ping</Link> • <Link to="/starwars">starwars</Link>
-        </div>;
+        return (
+            <div className="constrain-width medium">
+                <h4>Navigtion</h4>
+                <ul>
+                    <li><Link to="/github">github</Link></li>
+                    <li><Link to="/ping">ping</Link></li>
+                    <li><Link to="/starwars">starwars</Link></li>
+                </ul>
+            </div>
+        );
     }
 }
 
