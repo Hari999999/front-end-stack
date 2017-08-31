@@ -22,7 +22,7 @@ The repository is divided into three branch categories: Feature, Hotfix, Iterati
 - **Iteration**: Used for different build iterations but keep the same CSS Architecture e.g `iteration/redux-ducks`
 - **Test**: Create testing branches in either root or iterations for shared experiments. `test/chunking-experiment`
 
-Note: For **Iteration** branches create a custom `sass/test.scss` file to house any custom styling. This is to avoid conflicts when merging the CSS Architecture (`sass/*`) from Develop.
+Note: For **Iteration** branches create a `sass/test.scss` file to house any custom styling. This is to avoid conflicts when merging the CSS Architecture (`sass/*`) from Develop.
 
 #### Active Iterations:
 - [Redux Ducks](https://github.com/pixelfusion/front-end-stack/tree/iteration/redux-ducks)
