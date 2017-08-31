@@ -20,7 +20,7 @@
   },
   "main": "static/index.html",
   "scripts": {
-    "build": "front-end-scripts build",
+    "build": "front-end-scripts build  && sw-precache --config=sw-precache-config.js",
     "start": "front-end-scripts start",
     "lint": "yarn run lint-css && yarn run lint-js",
     "lint-css": "stylelint \"client/sass/**/*.{css,scss}\" --syntax scss",
@@ -53,6 +53,7 @@
     "babel-polyfill": "^6.20.0",
     "normalize.css": "^5.0.0",
     "svg4everybody": "^2.0.3",
+    "sw-precache": "^5.0.0",
     "whatwg-fetch": "^2.0.1"
   }
 }
