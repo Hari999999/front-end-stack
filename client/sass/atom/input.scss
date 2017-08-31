@@ -1,0 +1,39 @@
+/*
+ Input
+*/
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'],
+input[type='tel'],
+textarea {
+    max-width: 100%;
+    padding: rem(10);
+
+    color: $color-dark;
+
+    background-color: transparent;
+    border: 1px solid currentColor;
+    border-radius: 0; // Mobile Safari reset
+    box-shadow: none; // Reset for Firefox
+    outline: none;
+
+
+    // States
+    &:focus {
+
+    }
+
+    &:disabled,
+    &.is-disabled {
+        cursor: not-allowed;
+
+        opacity: 0.2;
+    }
+
+
+    // Elements
+    &::placeholder {
+
+    }
+}

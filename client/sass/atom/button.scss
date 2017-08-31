@@ -1,69 +1,113 @@
 /*
     Button
  */
-button[type='button'],
-button[type='submit'] {
-    padding: 0;
-
-    line-height: 1;
-    white-space: nowrap;
-
-    background: none;
-    border: none;
-
-    appearance: none;
-}
-
-a.button {
-    line-height: 1;
-
-    text-decoration: none;
-}
-
-a.button,
-.button[type='button'],
-.button[type='submit'] {
+.button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    // padding: ;
+    height: rem(40);
+    padding-right: rem(15);
+    padding-left: rem(15);
 
-    // color: ;
+    color: $color-light;
+    line-height: rem(20);
 
-    border: 1px solid transparent;
-    // border-radius: ;
+    background-color: $color-dark;
+    border: 1px solid currentColor;
 
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, opacity 0.2s;
 
 
     // States
     &:hover {
+        background-color: $color-dark-tint-1;
+    }
+
+    &:disabled,
+    &.is-disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+
+        opacity: 0.5;
     }
 
 
     // Types
-    &[disabled] {
-    }
-
     &.block {
         display: block;
+        width: 100%;
     }
 
-    &.default {
 
-        &:hover {
+    // Sizes
+    &.small {
+        height: rem(30);
+        padding-right: rem(10);
+        padding-left: rem(10);
+
+        font-size: rem(14);
+
+        .button-icon {
+            width: rem(20);
+            height: rem(20);
         }
     }
 
-    &.default.inverse {
+    &.large {
+        height: rem(50);
+        padding-right: rem(30);
+        padding-left: rem(30);
 
+        font-size: rem(18);
+
+        .button-icon {
+            width: rem(40);
+            height: rem(40);
+        }
+    }
+
+
+    // Themes
+    &.inverse {
+        color: $color-dark;
+
+        background-color: transparent;
+
+
+        // States
         &:hover {
         }
     }
 
     &.primary {
+        background-color: $color-primary;
 
+
+        // States
         &:hover {
+            background-color: $color-primary-tint-1;
+        }
+    }
+
+
+    // Elements
+    &-icon {
+        display: flex;
+        align-items: center;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: space-between;
+        width: rem(30);
+        height: rem(30);
+
+
+        // Types
+        &.left {
+            margin-right: rem(10);
+        }
+
+        &.right {
+            margin-left: rem(10);
         }
     }
 }

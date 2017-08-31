@@ -29,18 +29,18 @@
 
 /*
     Asset Locations
+    - No quotes, causes issues with Webpack -
  */
-$folder-image: /images; /* No quotes, causes issues with Webpack */
+$folder-image:    /images;
+$folder-icon:     /icons;
 
 
 
 /*
     Color Naming Conventions:
-    - primary
-    - secondary
-    - tertiary
-    - quaternary
-    - quinary
+    - primary, secondary, tertiary
+    - dark, light
+    - succes, warning, error
 
     // Lighter
     - tint-1
@@ -52,15 +52,24 @@ $folder-image: /images; /* No quotes, causes issues with Webpack */
 
     Color names generated at http://chir.ag/projects/name-that-color/
  */
-$color-black:             rgb(0, 0, 0);
-$color-white:             rgb(255, 255, 255);
+$color-black:               rgb(0, 0, 0);
+$color-midnight:            rgb(40, 40, 40);
+$color-concrete:            rgb(230, 230, 230);
+$color-white:               rgb(255, 255, 255);
+$color-limbo:               rgb(62, 104, 204);
+$color-monza:               rgb(216, 69, 77);
 
-$color-primary:           rgb(10, 10, 200);
-$color-secondary:         rgb(10, 200, 0);
-$color-tertiary:          rgb(200, 10, 10);
+$color-primary-tint-1:      color($color-limbo tint(20%));
+$color-primary:             $color-limbo;
+$color-primary-shade-1:     color($color-limbo shade(10%));
 
-$color-dark:              $color-black;
-$color-light:             $color-white;
+$color-dark:                $color-black;
+$color-dark-tint-1:         $color-midnight;
+
+$color-light-shade-1:       $color-concrete;
+$color-light:               $color-white;
+
+$color-shadow-primary:      color($color-dark alpha(20%));
 
 
 
@@ -73,22 +82,17 @@ $font-arial: 'Arial', sans-serif;
 
 $font-primary: $font-arial;
 
-$weight-light:   300;
-$weight-regular: 400;
-$weight-bold:    500;
+$weight-light:       300;
+$weight-regular:     400;
+$weight-bold:        500;
 
 
 
 /*
     Widths
  */
-$constrain-width:         rem(960);
-$constrain-width-medium:  rem(740);
-$constrain-width-small:   rem(600);
-
-
-
-/*
-    Padding
- */
-$padding-width: rem(20);
+$constrain-width-x-large:   1600;
+$constrain-width-large:     1400;
+$constrain-width:           960;
+$constrain-width-medium:    740;
+$constrain-width-small:     600;
