@@ -61,16 +61,16 @@ class StarWars extends Component {
     render() {
         const { people, error } = this.props;
         return (
-            <div>
-                <h1></h1>
-                { people &&
+            <div className="constrain-width medium">
+                <h4>Starwars</h4>
+                {people &&
                     <ReactTable
                       data={this.props.people}
                       columns={columns}
                       defaultPageSize="5"
                     />
                 }
-                { error && <ErrorBlock message={error.message} /> }
+                {error && <ErrorBlock message={error.message} />}
             </div>
         );
     }

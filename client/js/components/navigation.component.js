@@ -11,6 +11,7 @@ class Ping extends Component {
                     <li><Link to="/ping">ping</Link></li>
                     <li><Link to="/starwars">starwars</Link></li>
                 </ul>
+                <hr />
             </div>
         );
     }

@@ -2,12 +2,11 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 class Ping extends Component {
-
     render() {
         return (
-            <div>
-                <h1>{ this.props.pong }</h1>
-                <button onClick={this.props.ping}>ping</button>
+            <div className="constrain-width medium">
+                <h4>{this.props.pong}</h4>
+                <button className="button" onClick={this.props.ping}>Ping</button>
             </div>
         );
     }
