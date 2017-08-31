@@ -9,41 +9,27 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <div
-    className="error-block"
+    className="error-block || constrain-width medium"
 >
-    <h1
-        style={
-            Object {
-                "fontSize": "7em",
-              }
-        }
-    >
+    <h4>
         😢
-    </h1>
-    <h2
-        className="error-message"
-    >
+    </h4>
+    <p>
+        Error: 
         ajax error 404
-    </h2>
+    </p>
 </div>,
   "nodes": Array [
     <div
-      className="error-block"
+      className="error-block || constrain-width medium"
 >
-      <h1
-            style={
-                  Object {
-                        "fontSize": "7em",
-                      }
-            }
-      >
+      <h4>
             😢
-      </h1>
-      <h2
-            className="error-message"
-      >
+      </h4>
+      <p>
+            Error: 
             ajax error 404
-      </h2>
+      </p>
 </div>,
   ],
   "options": Object {},
@@ -85,41 +71,27 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <div
-          className="error-block"
+          className="error-block || constrain-width medium"
 >
-          <h1
-                    style={
-                              Object {
-                                        "fontSize": "7em",
-                                      }
-                    }
-          >
+          <h4>
                     😢
-          </h1>
-          <h2
-                    className="error-message"
-          >
+          </h4>
+          <p>
+                    Error: 
                     ajax error 404
-          </h2>
+          </p>
 </div>,
         "_debugID": 4,
         "_renderedOutput": <div
-          className="error-block"
+          className="error-block || constrain-width medium"
 >
-          <h1
-                    style={
-                              Object {
-                                        "fontSize": "7em",
-                                      }
-                    }
-          >
+          <h4>
                     😢
-          </h1>
-          <h2
-                    className="error-message"
-          >
+          </h4>
+          <p>
+                    Error: 
                     ajax error 404
-          </h2>
+          </p>
 </div>,
       },
       "_renderedNodeType": 0,

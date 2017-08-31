@@ -8,55 +8,73 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <div>
-    <label>
-        Github User: 
-        <input />
-    </label>
-    <button
-        onClick={[Function]}
+  "node": <div
+    className="constrain-width medium"
+>
+    <h4
+        className="github-user-label"
     >
-        Get User
-    </button>
+        Github User:
+    </h4>
+    <div
+        className="test-search"
+    >
+        <input />
+        <button
+            className="button small || github-get-user"
+            onClick={[Function]}
+        >
+            Get User
+        </button>
+    </div>
     <div
         className="github-user"
     >
         <img
             src="https://myimage.com"
         />
-        <h2>
-            hally9k
-        </h2>
         <h4>
+            hally9k
+        </h4>
+        <p>
             ID: 
             123456
-        </h4>
+        </p>
     </div>
 </div>,
   "nodes": Array [
-    <div>
-      <label>
-            Github User: 
-            <input />
-      </label>
-      <button
-            onClick={[Function]}
+    <div
+      className="constrain-width medium"
+>
+      <h4
+            className="github-user-label"
       >
-            Get User
-      </button>
+            Github User:
+      </h4>
+      <div
+            className="test-search"
+      >
+            <input />
+            <button
+                  className="button small || github-get-user"
+                  onClick={[Function]}
+            >
+                  Get User
+            </button>
+      </div>
       <div
             className="github-user"
       >
             <img
                   src="https://myimage.com"
             />
-            <h2>
-                  hally9k
-            </h2>
             <h4>
+                  hally9k
+            </h4>
+            <p>
                   ID: 
                   123456
-            </h4>
+            </p>
       </div>
 </div>,
   ],
@@ -77,7 +95,7 @@ ShallowWrapper {
                       }
         }
 />,
-      "_debugID": 25,
+      "_debugID": 27,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": Root {
@@ -112,55 +130,73 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <div>
-          <label>
-                    Github User: 
-                    <input />
-          </label>
-          <button
-                    onClick={[Function]}
+        "_currentElement": <div
+          className="constrain-width medium"
+>
+          <h4
+                    className="github-user-label"
           >
-                    Get User
-          </button>
+                    Github User:
+          </h4>
+          <div
+                    className="test-search"
+          >
+                    <input />
+                    <button
+                              className="button small || github-get-user"
+                              onClick={[Function]}
+                    >
+                              Get User
+                    </button>
+          </div>
           <div
                     className="github-user"
           >
                     <img
                               src="https://myimage.com"
                     />
-                    <h2>
-                              hally9k
-                    </h2>
                     <h4>
+                              hally9k
+                    </h4>
+                    <p>
                               ID: 
                               123456
-                    </h4>
+                    </p>
           </div>
 </div>,
-        "_debugID": 26,
-        "_renderedOutput": <div>
-          <label>
-                    Github User: 
-                    <input />
-          </label>
-          <button
-                    onClick={[Function]}
+        "_debugID": 28,
+        "_renderedOutput": <div
+          className="constrain-width medium"
+>
+          <h4
+                    className="github-user-label"
           >
-                    Get User
-          </button>
+                    Github User:
+          </h4>
+          <div
+                    className="test-search"
+          >
+                    <input />
+                    <button
+                              className="button small || github-get-user"
+                              onClick={[Function]}
+                    >
+                              Get User
+                    </button>
+          </div>
           <div
                     className="github-user"
           >
                     <img
                               src="https://myimage.com"
                     />
-                    <h2>
-                              hally9k
-                    </h2>
                     <h4>
+                              hally9k
+                    </h4>
+                    <p>
                               ID: 
                               123456
-                    </h4>
+                    </p>
           </div>
 </div>,
       },
