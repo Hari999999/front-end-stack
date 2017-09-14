@@ -3,7 +3,9 @@
 [![Build Status](http://img.shields.io/travis/pixelfusion/front-end-stack/master.svg?style=flat-square)](https://travis-ci.org/pixelfusion/front-end-stack)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
-Used by the Front End team at [Pixel Fusion](https://pixelfusion.co.nz), a Product Design studio based in Auckland, New Zealand.
+A boilerplate used by the Front End team at [Pixel Fusion](https://pixelfusion.co.nz), a Product Design studio based in Auckland, New Zealand.
+
+Further documentation around the architecture, techniques and best practices used in this boilerplate can be found in the [Front End Stack Wiki](https://github.com/pixelfusion/front-end-stack/wiki).
 
 
 ## Requirements
