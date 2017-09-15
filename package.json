@@ -20,8 +20,8 @@
   },
   "main": "static/index.html",
   "scripts": {
-    "build": "front-end-scripts build",
     "watch": "front-end-scripts watch",
+    "build": "front-end-scripts build  && sw-precache --config=sw-precache-config.js",
     "start": "front-end-scripts start",
     "lint": "yarn run lint-css && yarn run lint-js",
     "lint-css": "stylelint \"client/sass/**/*.{css,scss}\" --syntax scss",
@@ -91,6 +91,7 @@
     "reselect": "^2.5.4",
     "rxjs": "^5.2.0",
     "svg4everybody": "^2.0.3",
+    "sw-precache": "^5.0.0",
     "whatwg-fetch": "^2.0.1"
   }
 }
