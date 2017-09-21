@@ -1,0 +1,22 @@
+/*
+    Team
+ */
+
+// Declarations
+// Media Queries
+// States
+// Types: Display, Size, Theme
+// Elements: PSUEDO, Scoped, Atomic: Atoms, Molecules, Organisms
+
+// TODO: Grid fallback support
+
+.team {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    padding-top: 2vw;
+    padding-left: 2vw;
+}

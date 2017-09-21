@@ -1,0 +1,164 @@
+/*
+    Area
+ */
+
+// Declarations
+// Media Queries
+// States
+// Types: Display, Size, Theme
+// Elements: PSUEDO, Scoped, Atomic: Atoms, Molecules, Organisms
+
+$--wall-thickness : 0.3vw;
+
+
+/*
+
+
+    .work-area
+
+   -------------------------------------------
+1   | &-design                                |
+   -|-------------|-------------|-------------|
+2   | &-backend   | &-frontend  | &-interns   |
+   -|             |-------------|             |
+3   |             | &-pm        |             |
+   ---------------|             |             |
+4   | &-leads     |             |             |
+   -------------------------------------------
+5   | &-directors | &-hanna     | .           |
+   -------------------------------------------
+
+ */
+
+.work-area {
+    grid-area : work;
+
+    display: grid;
+    grid-template-areas:
+        'design design design'
+        'backend frontend interns'
+        'backend pm interns'
+        'leads pm interns'
+        'directors hanna .';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr 15vw;
+
+    border-top: $--wall-thickness solid $color-dark-tint-1;
+    border-bottom: $--wall-thickness solid $color-dark-tint-1;
+    border-left: $--wall-thickness solid $color-dark-tint-1;
+
+    &-design {
+        grid-area : design;
+
+        padding-right: 12vw;
+    }
+
+    &-backend {
+        grid-area : backend;
+
+        padding-right: 2vw;
+    }
+    &-frontend {
+        grid-area : frontend;
+
+        padding-right: 2vw;
+    }
+    &-interns {
+        grid-area : interns;
+
+        padding-right: 2vw;
+        margin-top: 18vw;
+    }
+    &-pm {
+        grid-area : pm;
+
+        padding-right: 2vw;
+    }
+    &-leads {
+        grid-area : leads;
+
+        padding-right: 2vw;
+    }
+    &-directors {
+        grid-area : directors;
+
+        padding-top: 0;
+        padding-right: 2vw;
+    }
+    &-hanna {
+        grid-area : hanna;
+    }
+}
+
+.entertainment-area {
+    display: grid;
+
+    grid-template-areas: 'bar kitchen';
+    grid-area: entertainment;
+    grid-template-columns: 45.5vw 10.24vw;
+
+
+    line-height: calc(29vw - ($--wall-thickness * 2));
+
+    border-top: $--wall-thickness solid $color-dark-tint-1;
+    border-right: $--wall-thickness solid $color-dark-tint-1;
+
+    &-bar {
+        grid-area: bar;
+    }
+
+    &-kitchen {
+        grid-area: kitchen;
+
+        border-bottom: $--wall-thickness solid $color-dark-tint-1;
+        border-left: $--wall-thickness solid $color-dark-tint-1;
+    }
+}
+
+
+
+.entrance-area {
+    grid-area: entrance;
+
+    &-tetris {
+        position: relative;
+
+        width: 22vw;
+        height: 22vw;
+
+        line-height: 22vw;
+
+        border: $--wall-thickness solid $color-dark-tint-1;
+
+
+    }
+}
+
+
+
+.meeting-area {
+    grid-column: 3 / meeting-end;
+    grid-row: meeting-start;
+
+    display: grid;
+    grid-template-areas:
+        'lander pong';
+    grid-template-columns: 13vw 17vw 30vw;
+    grid-template-rows: 1fr;
+
+    line-height: calc(15vw - ($--wall-thickness * 2));
+    text-align: center;
+
+    &-lander {
+        grid-area:lander;
+
+        border: $--wall-thickness solid $color-dark-tint-1;
+        border-right: none;
+    }
+
+    &-pong {
+        grid-area: pong;
+
+        border: $--wall-thickness solid $color-dark-tint-1;
+    }
+}

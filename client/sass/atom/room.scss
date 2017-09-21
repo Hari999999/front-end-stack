@@ -1,0 +1,22 @@
+/*
+    Room
+ */
+
+// Declarations
+// Media Queries
+// States
+// Types: Display, Size, Theme
+// Elements: PSUEDO, Scoped, Atomic: Atoms, Molecules, Organisms
+
+.room {
+    text-align: center;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        color: $color-white;
+
+        cursor: pointer;
+        background-color: $color-primary;
+    }
+}

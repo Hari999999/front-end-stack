@@ -1,0 +1,57 @@
+/*
+    Desk
+*/
+
+// Declarations
+// Media Queries
+// States
+// Types: Display, Size, Theme
+// Elements: PSUEDO, Scoped, Atomic: Atoms, Molecules, Organisms
+
+
+// Variables
+$desk-width : 7vw;
+$desk-height : 3.5vw;
+
+.desk {
+    // Declarations
+    margin: 0.1vw;
+
+    color: $color-dark-tint-1;
+    line-height: $desk-height;
+    text-align: center;
+
+    border: 0.15vw solid $color-primary;
+    border-radius: 0.3vw;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    // States
+    &:hover {
+        color: $color-white;
+
+        cursor: pointer;
+        background-color: $color-primary;
+    }
+
+    // Types
+    .horizontal & {
+        width: $desk-width;
+        height: $desk-height;
+    }
+
+    .verticle & {
+        width: $desk-height;
+        height: $desk-width;
+    }
+
+    & .rotate {
+        display: block;
+        width: $desk-width;
+        height: $desk-height;
+
+        transform: rotate(-90deg);
+
+        transform-origin: bottom;
+    }
+}
