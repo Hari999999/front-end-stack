@@ -90,6 +90,12 @@ The following polyfills have been included by default, ensure you remove any unu
 - [SVG4Everybody](https://github.com/jonathantneal/svg4everybody) - Adds the ability to implement `<use></use>` SVG element in older browsers (IE10), for use with external SVG loading.
 - [whatwg-fetch](https://github.com/github/fetch) - Adds `fetch()` support to older browsers.
 
+## TODO
+- [ ] Client and server side routing (React Router v4)
+- [ ] Tests
+- [ ] Docker support
+- [ ] Rendering html `head` (React Helmet?)
+
 
 ## Gotchas
 - Always set width and height on <svg> elements which implement external `<use>` elements, otherwise Internet Explorer does not display them.
