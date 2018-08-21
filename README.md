@@ -9,9 +9,8 @@ Further documentation around the architecture, techniques and best practices use
 
 
 ## Requirements
-- Node.js > 7.3.0 (`brew install node`)
-- NPM > 4.0.0 (installed as part of Node.js)
-- Yarn > 0.18.0 (`brew install yarn`)
+- Node.js > 10.7.0 (`brew install node`)
+- NPM > 6.1.0 (installed as part of Node.js)
 
 ---
 
@@ -33,53 +32,55 @@ Note: For **Iteration** branches create a `sass/test.scss` file to house any cus
 ---
 
 ## Installing
-Run `yarn install` to install the project.
+Run `npm install` to install the project.
 
 
 ## Running
-Run `yarn start` to watch and compile the Javascript and SCSS files. The project uses:
+Run `npm run start` to watch and compile the Javascript and SCSS files. The project uses:
 
-- Babel, to provide ES6 support.
-- PostCSS, to allow us to use:
+- **Typescript** for type checking and ES20xx features.
+- **PostCSS**, to allow us to use:
     - Autoprefixer, to take care of those pesky prefixes...which are [being phased out](https://webkit.org/blog/6131/updating-our-prefixing-policy/)!
-- Jest, to handle Unit testing of the Javascript.
+- **Jest**, to handle Unit testing of the Javascript.
+- **Webpack**, for compiling TS, SCSS, etc.
+- **Express** to allow server-side rendering, and for serving static assets.
+- **React** as a view layer.
 
-View the Style Guide at `https://localhost:3000/style-guide.html`
+View the Style Guide at `https://localhost:3000/style-guide`
 
 
 ## Building
-Run `yarn build` to create a production ready `public` folder with all necessary assets.
+Run `npm run build` to create a production ready `dist` folder with all necessary assets. Running `node dist/server/main.js` will start the server in production mode, enabling server-side rendering. 
 
 
 ## Linting
 To run both linters, use the following command:
 
-	yarn run lint
+	npm run lint
 
-To just run the Javascript linter:
+To just run the Typescript linter:
 
-	yarn run lint-js
+	npm run lint-ts
 
 To just run the SASS/CSS linter:
 
-	yarn run lint-scss
+	npm run lint-scss
 
 
 ## Testing
 To run the Jest unit tests, use the following command:
 
-	yarn test
+	npm test
 
 ---
 
 ## Browser Support
 Supported and tested in the following browsers:
 
-- Internet Explorer (10-11)
 - Chrome
 - Firefox
-- Safari 9
-- Edge 14
+- Safari 11
+- Edge 15
 
 
 ## Polyfills
@@ -99,9 +100,3 @@ Our base HTML is inspired by:
 
 - [HTML5Boilerplate](https://github.com/h5bp/html5-boilerplate)
 - [HEAD](https://github.com/joshbuchea/HEAD)
-
-
-## Debugging (TODO)
-
-- `front-end-scripts build --linked`
-- `front-end-scripts start --linked`
