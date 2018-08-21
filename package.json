@@ -28,7 +28,7 @@
     "lint-css": "stylelint \"src/sass/**/*.{css,scss}\" --syntax scss",
     "precommit": "npm run lint",
     "prepush": "npm test",
-    "test": "jest",
+    "test": "echo 'No tests available'",
     "icon:compress": "svgo -f static/icons --pretty",
     "icon:compile": "spritesh -i ./static/icons -o ./static/icons/_icon.svg"
   },
@@ -95,6 +95,7 @@
     "style-loader": "^0.22.1",
     "svg4everybody": "^2.0.3",
     "sw-precache": "^5.0.0",
+    "ts-jest": "^23.1.4",
     "ts-loader": "^4.5.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
