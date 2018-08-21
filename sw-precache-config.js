@@ -1,5 +1,5 @@
 module.exports = {
-    stripPrefix: 'public/',
+    stripPrefix: 'dist/',
     staticFileGlobs: [
         'public/*.html',
         'public/manifest.json',

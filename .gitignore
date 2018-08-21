@@ -2,8 +2,9 @@
 *.map
 .env
 .tmp
-/node_modules
-/public
+node_modules
+dist
 /tests/coverage
-/vendor
+vendor
 .DS_Store
+.vscode

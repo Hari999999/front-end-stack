@@ -1,20 +1,12 @@
 language: node_js
 
 node_js:
-  - '7'
-
-before_install:
-  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  - sudo apt-get update
-  - sudo apt-get install yarn
-
-install: yarn
+  - '10'
 
 script:
-  - yarn install
-  - yarn run lint
-  - yarn build
+  - npm ci
+  - npm run lint
+  - npm run build
 
 notifications:
   email: false
