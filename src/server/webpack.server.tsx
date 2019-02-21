@@ -11,7 +11,7 @@ import webpackHotMiddeware from 'webpack-hot-middleware'
 import * as config from '../../webpack.client.config'
 import { App } from '../client/app'
 
-const compiler: any = webpack(config.default as any)
+const compiler: any = webpack(config as any)
 
 function createDevServer(app: any) {
     console.warn(chalk.yellow('Using development files...'))
